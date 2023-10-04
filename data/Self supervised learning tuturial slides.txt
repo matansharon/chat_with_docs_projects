@@ -1,0 +1,35 @@
+
+Self-Supervised Learning in Vision 
+From Research Advances to Best Practices 
+ICML 2023 Tutorial Part 1-A 
+
+Xinlei Chen 
+
+Self-Supervised Learning 
+• Pre-train representations without labels for downstream tasks 
+Self-Supervised Learning 
+• Pre-train representations without labels for downstream tasks 
+Yann: 
+
+Self-Supervised Learning 
+• Pre-train representations without labels for downstream tasks 
+
+build chat-bot 
+
+
+detect and segment objects 
+
+predictstructure 
+
+
+
+Self-Supervised Representation Learning 
+• Pre-train representations without labels for downstream tasks 
+
+Self-Supervised Representation Learning 
+• Scalable: train huge models on unlimited data and not worry about overfitting 
+[Devlin et al, NAACL 2019] [Brown et al, NeurIPS 2020] 
+Self-Supervised Representation Learning 
+• Scalable: train huge models on unlimited data and not worry about overfitting 
+
+
