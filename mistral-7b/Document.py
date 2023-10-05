@@ -15,17 +15,27 @@ class Documents:
         self._path=path
         self._type=''
         self._text=''
+        
     def get_path(self):
         return self._path
+
     def get_type(self):
         return self._type
+
     def get_text(self):
         return self._text
+
     def set_path(self,path):
         self._path=path
+
     def set_type(self,type):
         self._type=type
+
     def set_text(self,text):
         self._text=text
-    
         
+        
+        
+if __name__=="__main__":
+    print("Document.py is being run directly")
+    
