@@ -1,6 +1,0 @@
-Ian Pointer
-Programming 
-PyTorch for  
-Deep Learning
-Creating and Deploying Deep Learning 
-Applications
