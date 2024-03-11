@@ -1,28 +1,15 @@
 import streamlit as st
-import helper_functions as hf
+from helper_functions import *
 
 
 def main():
-    # st.header("Chat with me")
-    
-    # db=hf.create_db(chunks)
-    # db=hf.load_db()
-    # model=hf.ChatOpenAI()
-    # st.write("I am ready to chat")
-    db,model=hf.main_app()
-    
-    
+    db,model=main_app()
     query=st.text_input("Ask me anything")
     if query:
-    
-        
-    # st.write(prompt_template)
-        response=hf.get_response(query,db,model)
-    # st.write(results[0][0].page_content)
-    # st.write(db.similarity_search(query))
+        response=get_response(query,db,model)
         st.write(response)
-    
-    
-    
+    file=st.file_uploader("Upload file")
+    if file:
+        st.write(file)
 if __name__ == "__main__":
     main()

@@ -60,6 +60,7 @@ def main_app():
     # pass
     chunks=load_and_split_documents()
     db=create_db(chunks)
-    
+    #for GPT-4 use this: 'gpt-4-turbo-preview'
     model=ChatOpenAI()
+    
     return db,model
