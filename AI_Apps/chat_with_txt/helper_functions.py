@@ -55,7 +55,7 @@ def get_response(query,db,model):
     results=get_results_with_scores(query,db)
     prompt_template=get_prompt_template(results,query)
     response=model.invoke(prompt_template)
-    return response
+    return response.content
 def main_app():
     pass
     # chunks=load_and_split_documents()
