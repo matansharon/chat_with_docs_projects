@@ -6,13 +6,22 @@ from langchain_openai import OpenAIEmbeddings, ChatOpenAI
 from langchain_community.vectorstores.chroma import Chroma
 from langchain_core.prompts import ChatPromptTemplate
 from datetime import datetime
-
+import json
 load_dotenv()
-directory_path='/Users/matansharon/python/chat_with_docs/data/text'
-
-def load_and_split_documents():
-    loader = DirectoryLoader(directory_path)
+DIRECTORY_PATH='/Users/matansharon/python/chat_with_docs/data/text'
+DOCS_PATH='/Users/matansharon/python/chat_with_docs/AI_Apps/chat_with_txt/docs.json'
+def get_all_docs():
+    
+    with open(DOCS_PATH,'r') as f:
+        data=json.load(f)
+        docs=data['documents']
+    return docs
+def load_all_docs_in_data_folder():
+    loader = DirectoryLoader(DIRECTORY_PATH)
     documents = loader.load()
+    return documents
+def load_and_split_documents(document):
+    
     
     text_splitter = RecursiveCharacterTextSplitter(
         chunk_size=1000,
@@ -20,9 +29,9 @@ def load_and_split_documents():
         length_function=len,
         add_start_index=True
     )
-    chunks=text_splitter.split_documents(documents)
+    chunks=text_splitter.split_documents(document)
     return chunks
-def create_db(chunks):
+def create_new_db(chunks):
     path='chroma_db'
     if not os.path.exists(path):
         
@@ -59,7 +68,7 @@ def get_response(query,db,model):
 def main_app():
     # pass
     chunks=load_and_split_documents()
-    db=create_db(chunks)
+    db=create_new_db(chunks)
     #for GPT-4 use this: 'gpt-4-turbo-preview'
     model=ChatOpenAI()
     
