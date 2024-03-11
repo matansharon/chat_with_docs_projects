@@ -57,9 +57,9 @@ def get_response(query,db,model):
     response=model.invoke(prompt_template)
     return response.content
 def main_app():
-    pass
-    # chunks=load_and_split_documents()
-    # db=create_db(chunks)
+    # pass
+    chunks=load_and_split_documents()
+    db=create_db(chunks)
     
-    # model=ChatOpenAI()
-    # return db,model
+    model=ChatOpenAI()
+    return db,model
