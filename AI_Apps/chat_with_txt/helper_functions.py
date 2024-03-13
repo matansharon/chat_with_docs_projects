@@ -13,7 +13,7 @@ chroma_client = chromadb.Client()
 
 load_dotenv()
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-DIRECTORY_PATH='/Users/matansharon/python/chat_with_docs/AI_Apps/chat_with_txt/data'
+DIRECTORY_PATH='/Users/matansharon/python/chat_with_doc/AI_Apps/chat_with_txt/data'
 
 
 
@@ -21,8 +21,13 @@ DIRECTORY_PATH='/Users/matansharon/python/chat_with_docs/AI_Apps/chat_with_txt/d
 
 def get_documents_names():
     documents_names = os.listdir(DIRECTORY_PATH)
-    return documents_names
+    res=[]
+    for doc in documents_names:
+        if doc.endswith(".pdf"):
+            res.append(doc)
+    return res
 def load_all_docs_in_data_folder(documents_names):
+    
     data_documents= []
     for doc in documents_names:
         path=os.path.join(DIRECTORY_PATH+'/',doc)
@@ -50,23 +55,26 @@ def split_text(text:str):
 
 def create_new_db(chunks):
     
-    path='chroma_db'
-    if chunks:
-        
-        db=Chroma.from_texts(texts=chunks,embedding=OpenAIEmbeddings(model='text-embedding-3-small'),persist_directory=path)
-        return db
+    
+    path='/Users/matansharon/python/chat_with_doc/AI_Apps/chroma_db'
+    
     if not os.path.exists(path):
         
         db=Chroma.from_texts(texts=[''],embedding=OpenAIEmbeddings(model='text-embedding-3-small'),persist_directory=path)
         return db
+    if chunks:
+        
+        db=Chroma.from_texts(texts=chunks,embedding=OpenAIEmbeddings(model='text-embedding-3-small'),persist_directory=path)
+        return db
     return load_db()
 
 def load_db():
-    db = Chroma(persist_directory="chroma_db",embedding_function=OpenAIEmbeddings(model='text-embedding-3-small'))
+    
+    db = Chroma(persist_directory='/Users/matansharon/python/chat_with_doc/AI_Apps/chroma_db',embedding_function=OpenAIEmbeddings(model='text-embedding-3-small'))
     return db
 
 def get_results_with_scores(query,db):
-    
+    print("in get results with scores")
     res=db.similarity_search_with_relevance_scores(query,k=3)
     value_results=[]
     
@@ -102,7 +110,14 @@ def get_response(query,db,model):
     prompt_template=get_prompt_template(results,query)
     response=model.invoke(prompt_template)
     return response.content
-
+def add_document(document,db):
+    
+    text=""
+    for page in document.pages:
+        text+=page.extract_text()
+    chunks=split_text(text)
+    db.add_texts(chunks)
+    
 def main_app():
 
     documents_names=get_documents_names()
