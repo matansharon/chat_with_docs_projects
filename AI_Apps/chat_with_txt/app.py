@@ -1,17 +1,20 @@
 import streamlit as st
-from helper_functions import *
+import helper_functions as hf
 from PyPDF2 import PdfReader
 
 def main():
-    # db,model=main_app()
-    query=st.text_input("Ask me anything")
-    # if query:
-    #     # response=get_response(query,db,model)
-    #     st.write(response)
-    file=st.file_uploader("Upload file")
-    if file:
-        st.write(file)
-        pdf=PdfReader(file).pages[0].extract_text()
-        st.write(pdf)
+    db,model,documents_names=hf.main_app()
+    with st.sidebar:
+        st.write("### this is the files that in the database:")
+        for i in documents_names:
+            st.markdown(f"- {i}")
+    pdf = st.file_uploader("Upload a .pdf file", type=["pdf"])
+    if pdf:
+        st.write("pdf file were uploaded")
+    query=st.text_input("Ask me Anything about the documents")
+    if query:
+        st.write(hf.get_response(query=query,db=db,model=model))
+    
+    
 if __name__ == "__main__":
     main()
