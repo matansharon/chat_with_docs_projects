@@ -42,7 +42,7 @@ def load_all_docs_in_data_folder(documents_names):
     
 
 def split_text(text:str):
-    
+    print("in split")
     
     text_splitter = RecursiveCharacterTextSplitter(
         chunk_size=1000,
@@ -54,7 +54,7 @@ def split_text(text:str):
     return chunks
 
 def create_new_db(chunks):
-    
+    print("in create db")
     
     path='/Users/matansharon/python/chat_with_doc/AI_Apps/chroma_db'
     
@@ -119,7 +119,7 @@ def add_document(document,db):
     db.add_texts(chunks)
     
 def main_app():
-
+    print("int main app")
     documents_names=get_documents_names()
     docs=load_all_docs_in_data_folder(documents_names=documents_names)
     splited_docs=[]
@@ -128,7 +128,7 @@ def main_app():
         for chunk in chunks:
             splited_docs.append(chunk)
             
-    print('splited_docs',len(splited_docs))
+    
     db=create_new_db(splited_docs)
     model=ChatOpenAI(model_name='gpt-4-turbo-preview')
     
