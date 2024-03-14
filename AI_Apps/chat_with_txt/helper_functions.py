@@ -130,7 +130,7 @@ def main_app():
             
     
     db=create_new_db(splited_docs)
-    model=ChatOpenAI(model_name='gpt-4-turbo-preview')
+    model=ChatOpenAI(model='gpt-4-turbo-preview')
     
     return db,model,documents_names
 
