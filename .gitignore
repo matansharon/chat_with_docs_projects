@@ -2,3 +2,4 @@
 .venv/
 .env
 /AI_Apps/chroma_db/
+/data/
