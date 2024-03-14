@@ -80,7 +80,7 @@ def get_results_with_scores(query,db):
     
     for i in res:
         score=i[1]
-        if score>0 and score<0.5:
+        if score>0 and score<1:
             value_results.append(i)
     return value_results
 def get_prompt_template(results,query):
