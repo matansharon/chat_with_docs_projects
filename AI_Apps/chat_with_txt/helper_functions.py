@@ -128,7 +128,7 @@ def main_app():
         for chunk in chunks:
             splited_docs.append(chunk)
             
-    
+    print(len(splited_docs))
     db=create_new_db(splited_docs)
     model=ChatOpenAI(model='gpt-4-turbo-preview')
     

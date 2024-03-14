@@ -19,6 +19,11 @@ def main():
         st.session_state['db']=db
         st.session_state['model']=model
         st.session_state['documents_names']=documents_names
+        
+    if 'documents_names' in st.session_state:
+        with st.sidebar:
+            for doc in st.session_state.documents_names:
+                st.sidebar.markdown(f"- {doc}")
     pdf = st.file_uploader("Upload a .pdf file", type=["pdf"])
     if pdf :
         st.write("pdf file were uploaded")
