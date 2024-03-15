@@ -32,9 +32,10 @@ def main():
         
         hf.add_document(p,st.session_state.db)
         pdf=None
-    query=st.text_input("Ask me Anything about the documents")
-    if query and not(st.session_state.db==None):
-        st.write(hf.get_response(query=query,db=st.session_state.db,model=st.session_state.model))
+    st.session_state.query=st.text_input("Ask me Anything about the documents")
+    if st.session_state.query and not(st.session_state.db==None):
+        st.write(hf.get_response(query=st.session_state.query,db=st.session_state.db,model=st.session_state.model))
+        st.session_state.query=""
         
     
 if __name__== "__main__":
