@@ -13,7 +13,7 @@ chroma_client = chromadb.Client()
 
 load_dotenv()
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-DIRECTORY_PATH='/Users/matansharon/python/chat_with_doc/AI_Apps/chat_with_pdf/data'
+DIRECTORY_PATH='/Users/matansharon/python/chat_with_doc/AI_Apps/chat_with_pdf_V1/data'
 
 
 
