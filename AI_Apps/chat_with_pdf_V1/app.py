@@ -3,10 +3,10 @@ import helper_functions as hf
 from PyPDF2 import PdfReader
 from langchain_core.messages import AIMessage, HumanMessage, ChatMessage
 
-st.session_state['db']=None
-st.session_state['model']=None
-st.session_state['documents_names']=None
-st.session_state['first_run']=False
+# st.session_state['db']=None
+# st.session_state['model']=None
+# st.session_state['documents_names']=None
+# st.session_state['first_run']=False
 
 
 def main():
@@ -15,7 +15,7 @@ def main():
     st.title("Chat with Elcam Documnet's 📚")
     st.write("This app is designed to help you find information in your documents")
     
-    if "db" not in st.session_state.db:
+    if "db" not in st.session_state:
         
         db,model,documents_names=hf.main_app()
         st.session_state['db']=db
@@ -26,11 +26,20 @@ def main():
         st.session_state.chat_history=[
         AIMessage("Hello and welcome to the Elcam's document chatbot"),
     ]    
-    if 'documents_names' in st.session_state:
+    if 'documents_names' in st.session_state and st.session_state.documents_names is not None:
         with st.sidebar:
+            
+            file=st.sidebar.file_uploader("Upload a .pdf file", type=["pdf"])
             st.sidebar.subheader("List of files in the database:")
+            if file:
+                st.session_state.documents_names.append(file.name)
+                p=PdfReader(file)
+                hf.add_document(p,st.session_state.db)
+                file=None
             for doc in st.session_state.documents_names:
                 st.sidebar.markdown(f"- {doc}")
+            
+            
     # הקטע קוד כאן הוא בגרסה שאפשר להוסיף מסמכים דינמית
     # pdf = st.file_uploader("Upload a .pdf file", type=["pdf"])
     # if pdf :
@@ -46,7 +55,7 @@ def main():
     
     st.session_state.query=st.chat_input("Ask me Anything about the documents")
     
-    if st.session_state.query and st.session_state.query!="":
+    if st.session_state.query and st.session_state.query!="" and st.session_state.db is not None:
         response=hf.get_response(query=st.session_state.query,db=st.session_state.db,model=st.session_state.model)
         st.session_state.chat_history.append(HumanMessage(st.session_state.query))
         st.session_state.chat_history.append(AIMessage(response))
