@@ -15,14 +15,17 @@ def main():
     st.title("Chat with Elcam Documnet's 📚")
     st.write("This app is designed to help you find information in your documents")
     
-    if st.session_state.db==None:
+    if "db" not in st.session_state.db:
         
         db,model,documents_names=hf.main_app()
         st.session_state['db']=db
         st.session_state['model']=model
         st.session_state['documents_names']=documents_names
         
-        
+    if "chat_history" not in st.session_state:
+        st.session_state.chat_history=[
+        AIMessage("Hello and welcome to the Elcam's document chatbot"),
+    ]    
     if 'documents_names' in st.session_state:
         with st.sidebar:
             st.sidebar.subheader("List of files in the database:")
@@ -42,16 +45,22 @@ def main():
 
     
     st.session_state.query=st.chat_input("Ask me Anything about the documents")
-    with st.chat_message("AI"):
-        st.write("AI: Hello and welcome to the Elcam's document chatbot")
-    if st.session_state.query and not(st.session_state.db==None):
-        
+    
+    if st.session_state.query and st.session_state.query!="":
         response=hf.get_response(query=st.session_state.query,db=st.session_state.db,model=st.session_state.model)
-        with st.chat_message("Human"):
-            st.write(f"You: {st.session_state.query}")
-        with st.chat_message("AI"):
-            st.write(f"AI: {response}")
-        st.session_state.query=""  
+        st.session_state.chat_history.append(HumanMessage(st.session_state.query))
+        st.session_state.chat_history.append(AIMessage(response))
+    
+    #log the conversation
+    if st.session_state.chat_history:
+        
+        for message in st.session_state.chat_history:
+            if message.type=="ai":
+                with st.chat_message("AI"):
+                    st.write(f"AI: {message.content}")
+            else:
+                with st.chat_message("Human"):
+                    st.write(f"You: {message.content}")
         
         
     
