@@ -1,10 +1,15 @@
 import streamlit as st
-
+import requests
+import bs4
+    
 def main():
     with st.sidebar:
         st.write("Enter URL")
         url = st.text_input("URL")
-        st.write(url)
+        
+        if st.button("Send"):
+        # Add code here to send the message to the website and display the response
+            st.write("You: " + url)
     st.title("Chat with Website")
     st.header("Welcome to Chat with Website")
     
@@ -17,13 +22,9 @@ def main():
 
     st.subheader("Chat Box")
     message = st.text_input("Type your message here")
-
-    if st.button("Send"):
-        # Add code here to send the message to the website and display the response
-        st.write("You: " + message)
-
+    
     st.subheader("Website Response")
-    # Add code here to display the response from the website
+    
     
 
 if __name__ == "__main__":
