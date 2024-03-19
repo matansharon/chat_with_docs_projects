@@ -1,58 +1,5 @@
 import streamlit as st
-import requests
-import bs4
-from langchain_core.messages import AIMessage,HumanMessage
-from langchain_community.document_loaders import WebBaseLoader
-from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain_community.vectorstores.chroma import Chroma
-from langchain_openai import OpenAIEmbeddings, ChatOpenAI
-from dotenv import load_dotenv
-from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
-from langchain.chains import create_history_aware_retriever,create_retrieval_chain
-from langchain.chains.combine_documents import  create_stuff_documents_chain
-
-
-load_dotenv()
-
-
-
-
-def get_response(user_input):
-    return "Hello from the website!"
-
-def get_vectorstore_from_url(url):
-    loader=WebBaseLoader(url)
-    document=loader.load()
-    text_splitter=RecursiveCharacterTextSplitter()
-    document_chunks=text_splitter.split_documents(document)
-    vector_store=Chroma.from_documents(document_chunks,OpenAIEmbeddings()) 
-    return vector_store
-
-def context_retriever_chain(vector_store):
-    llm=ChatOpenAI()
-    retriever=vector_store.as_retriever()
-    prompt=ChatPromptTemplate.from_messages(
-        [MessagesPlaceholder(variable_name="chat_history"), 
-         ("user", "{input}"), 
-         ("user", "Hello from the website!"),
-         ])
-    retriever_chain=create_history_aware_retriever(llm,retriever,prompt)
-    return retriever_chain
-
-
-def get_conversion_rag_chain(retriever_chain):
-    llm = ChatOpenAI()
-    prompt = ChatPromptTemplate.from_messages([
-        ('system', "answer the following questions based on the below context:\n\n{context}"),
-        MessagesPlaceholder(variable_name="chat_history"),
-        ("user", "{input}"),
-    ])
-    
-    stuff_documents_chain = create_stuff_documents_chain(llm, prompt)
-    # Correctly call create_retrieval_chain with the retriever_chain and stuff_documents_chain
-    combined_retrieval_chain = create_retrieval_chain(retriever_chain, stuff_documents_chain)
-    return combined_retrieval_chain
-
+from utils import *
 
 def main():
     st.set_page_config(page_title="Chat with Website", page_icon="🤖")
@@ -66,38 +13,16 @@ def main():
     """)
     st.subheader("Chat Box")
     with st.sidebar:
-        st.write("Enter URL")
-        url = st.text_input("URL")
+        if "urls"  in st.session_state:
+            for url in st.session_state["urls"]:
+                st.markdown(f"- {url}")
 
-        if st.button("Send") and url:
-            # Add code here to send the message to the website and display the response
-            st.write("You: " + url)
-
-    if url is not None and url != "":
-        st.info("Please wait while we load the website...")
-    else:
-        if 'chat_history' not in st.session_state:
-            st.session_state['chat_history'] = [
-                AIMessage("Hello! I am a bot. Ask me anything!")
-            ]
-        if "vector_store" not in st.session_state:
-            # url = "https://en.wikipedia.org/wiki/Graphics_processing_unit"
-            # url="https://www.bbc.com/news/world-us-canada-68600093"
-            url="https://www.oscars.org/oscars/ceremonies/2024"
-            st.session_state["vector_store"] = get_vectorstore_from_url(url)
-
-        # if "retriever_chain" not in st.session_state:
-        #     st.session_state["retriever_chain"] = context_retriever_chain(vector_store=st.session_state["vector_store"])
-        retriever_chain=context_retriever_chain(vector_store=st.session_state["vector_store"])
-        conversation_rag_chain = get_conversion_rag_chain(retriever_chain=retriever_chain)
-
-        user_query = st.text_input("Type your message here")
-        if user_query and user_query != "":
-            response = conversation_rag_chain.invoke({
-                "chat_history": st.session_state['chat_history'],
-                "input": user_query
-            })
-            st.write(response['answer'])
+    user_query = st.text_input("Type your message here")
+    if user_query and user_query != "":
+        response=get_response(user_query)
+        st.write(response['answer'])
+        st.session_state['chat_history'].append(HumanMessage(user_query))
+        st.session_state['chat_history'].append(AIMessage(response['answer']))
 
     st.write("Chat History")
     for message in st.session_state['chat_history']:
@@ -109,6 +34,16 @@ def main():
                 st.write(message.content)
 
 if __name__ == "__main__":
+    if "conversion_rag_chain" not in st.session_state:
+        vector_store,retriever_chain,conversion_rag_chain,urls=run()
+        st.session_state["vector_store"]=vector_store
+        st.session_state["retriever_chain"]=retriever_chain
+        st.session_state["conversion_rag_chain"]=conversion_rag_chain
+        st.session_state["urls"]=urls
+        st.session_state['chat_history'] = [
+                AIMessage("Hello! I am a bot. Ask me anything!")
+            ]
+        
     main()
 
 
