@@ -1,5 +1,5 @@
 import streamlit as st
-import helper_functions as hf
+import utils as hf
 from PyPDF2 import PdfReader
 from langchain_core.messages import AIMessage, HumanMessage, ChatMessage
 
