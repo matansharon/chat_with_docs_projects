@@ -28,6 +28,7 @@ def get_vectorstore_from_url(url):
 def get_context_retriever_chain(vector_store):
     llm=ChatOpenAI()
     retriever=vector_store.as_retriever()
+
     prompt=ChatPromptTemplate.from_messages(
         [MessagesPlaceholder(variable_name="chat_history"), 
          ("user", "{input}"), 
