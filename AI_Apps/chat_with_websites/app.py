@@ -31,7 +31,7 @@ def context_retriever_chain(vector_store):
     prompt=ChatPromptTemplate.from_messages(
         [MessagesPlaceholder(variable_name="chat_history"), 
          ("user", "{input}"), 
-         ("user", "Hello from the website!"),
+         
          ])
     retriever_chain=create_history_aware_retriever(llm,retriever,prompt)
     return retriever_chain
@@ -56,11 +56,12 @@ def get_response(user_input):
                 "chat_history": st.session_state.chat_history,
                 "input": user_input
             })
-    context=""
-    for res in response:
-        context+=res.page_content
-    llm=ChatOpenAI()
-    return llm.invoke(f"answer the following questions based on the below context:\n\n{context}")
+    return response
+    # context=""
+    # for res in response:
+    #     context+=res.page_content
+    # llm=ChatOpenAI()
+    # return llm.invoke(f"answer the following questions based on the below context:\n\n{context}")
 
 
 def initialize_session_state():
@@ -110,18 +111,18 @@ def main():
     user_query = st.text_input("Type your message here")
     if user_query and user_query != "" and 'chat_history' in st.session_state and "vector_store" in st.session_state and "conversion_rag_chain" in st.session_state and "retriever_chain" in st.session_state:
         response=get_response(user_query)
-        st.write(response.content)
+        st.write(response)
         st.session_state['chat_history'].append(HumanMessage(user_query))
-        st.session_state['chat_history'].append(AIMessage(response.content))
+        st.session_state['chat_history'].append(AIMessage(response))
 
-    st.write("Chat History")
-    for message in st.session_state['chat_history']:
-        if isinstance(message, AIMessage):
-            with st.chat_message("AI"):
-                st.write(message.content)
-        elif isinstance(message, HumanMessage):
-            with st.chat_message("User"):
-                st.write(message.content)
+    # st.write("Chat History")
+    # for message in st.session_state['chat_history']:
+    #     if isinstance(message, AIMessage):
+    #         with st.chat_message("AI"):
+    #             st.write(message.content)
+    #     elif isinstance(message, HumanMessage):
+    #         with st.chat_message("User"):
+    #             st.write(message.content)
 
 if __name__ == "__main__":
     
