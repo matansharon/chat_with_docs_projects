@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain.chains import create_history_aware_retriever, create_retrieval_chain
 from langchain.chains.combine_documents import create_stuff_documents_chain
+import os
 
 
 load_dotenv()
@@ -45,21 +46,25 @@ def add_new_url(url,vector_store:Chroma):
         document_chunks = text_splitter.split_documents(document)
         vector_store.add_documents(document_chunks)
 def get_vectorstore_from_url(urls):
+    if not os.path.exists("website_db"):
     # get the text in document form
-    all_documents = []
-    for url in urls:
-        loader = WebBaseLoader(url)
-        document = loader.load()
-    
-    # split the document into chunks
-        text_splitter = RecursiveCharacterTextSplitter()
-        document_chunks = text_splitter.split_documents(document)
-        all_documents.extend(document_chunks)
-    
-    # create a vectorstore from the chunks
-    vector_store = Chroma.from_documents(all_documents, OpenAIEmbeddings())
+        all_documents = []
+        for url in urls:
+            loader = WebBaseLoader(url)
+            document = loader.load()
+        
+        # split the document into chunks
+            text_splitter = RecursiveCharacterTextSplitter()
+            document_chunks = text_splitter.split_documents(document)
+            all_documents.extend(document_chunks)
+        
+        # create a vectorstore from the chunks
+        vector_store = Chroma.from_documents(all_documents, OpenAIEmbeddings())
 
-    return vector_store
+        return vector_store
+    else:
+        print("Loading from disk")
+        return Chroma(persist_directory="website_db",embedding_function=OpenAIEmbeddings())
 
 def get_context_retriever_chain(vector_store):
     llm = ChatOpenAI()
