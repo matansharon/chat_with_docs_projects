@@ -20,23 +20,24 @@ from langchain_openai import ChatOpenAI
 load_dotenv()
 
 
+def init():
+    pass
 
 
-
-
-st.title('Chat with Excel Files')
-st.header('Ask me anything about the the excel files')
-st.chat_input("Ask me anything")
-with st.sidebar:
-    st.write("## Database")
-    st.write("### Add new file")
-    file=st.file_uploader("Upload a file", type=["csv"])
-    if file:
-        st.write(f"{file.name} uploaded")
-        st.session_state.file=file
-if "file" in st.session_state:
-    df = pd.read_csv(st.session_state.file.name, encoding='ISO-8859-1')
-    st.write(df.head())
+def main():
+    st.title('Chat with Excel Files Using PandasAI 🐼')
+    st.header('Ask me anything about the the excel files')
+    st.chat_input("Ask me anything")
+    with st.sidebar:
+        st.write("## Database")
+        st.write("### Add new file")
+        file=st.file_uploader("Upload a file", type=["csv"])
+        if file:
+            st.write(f"{file.name} uploaded")
+            st.session_state.file=file
+    if "file" in st.session_state:
+        df = pd.read_csv(st.session_state.file.name, encoding='ISO-8859-1')
+        st.write(df.head())
         
     
     
