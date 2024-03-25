@@ -12,32 +12,51 @@ from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain_core.messages import AIMessage, HumanMessage, ChatMessage
 from langchain_community.vectorstores.chroma import Chroma
 
-import pandas as pd
+
 from langchain_community.utilities import SQLDatabase
 from sqlalchemy import create_engine
 from langchain_community.agent_toolkits import create_sql_agent
 from langchain_openai import ChatOpenAI
+import pandas as pd
+from pandasai.llm import OpenAI
+from dotenv import load_dotenv
+from pandasai import SmartDataframe
+
+
+
 load_dotenv()
 
-
 def init():
-    pass
-
+    llm=OpenAI()
+    df=pd.read_csv('laptops.csv',encoding='ISO-8859-1')
+    st.session_state.llm=llm
+    st.session_state.df=df
+    smart_df=SmartDataframe(df,config={'llm':llm})
+    
+    st.session_state.smart_df=smart_df
+# 
 
 def main():
     st.title('Chat with Excel Files Using PandasAI 🐼')
     st.header('Ask me anything about the the excel files')
-    st.chat_input("Ask me anything")
+    # st.chat_input("Ask me anything")
     with st.sidebar:
         st.write("## Database")
         st.write("### Add new file")
         file=st.file_uploader("Upload a file", type=["csv"])
-        if file:
-            st.write(f"{file.name} uploaded")
-            st.session_state.file=file
-    if "file" in st.session_state:
-        df = pd.read_csv(st.session_state.file.name, encoding='ISO-8859-1')
-        st.write(df.head())
-        
     
+if 'init' not in st.session_state:
+    init()
+    st.session_state.init=True
+if 'df' in st.session_state:
+    st.write(st.session_state.df.head())
+user_input=st.chat_input("Ask me anything")
+if user_input and 'smart_df' in st.session_state:
+    response=st.session_state.smart_df.chat(user_input)
+    st.write(response)
+        
+
+
+if __name__ == '__main__':
+    main()
     
