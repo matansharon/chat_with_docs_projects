@@ -24,6 +24,7 @@ from pandasai import SmartDataframe
 
 
 
+# API_TOKEN = os.getenv('OPENAI_API_KEY')
 load_dotenv()
 
 def init():
