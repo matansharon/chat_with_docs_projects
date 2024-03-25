@@ -56,7 +56,7 @@ def split_text(text:str):
 def create_new_db(chunks):
     print("in create db")
     
-    path='/Users/matansharon/python/chat_with_doc/AI_Apps/chroma_db'
+    path='/Users/matansharon/python/chat_with_doc/AI_Apps/chat_with_pdf_V1/pdf_db'
     # path=''
     if not os.path.exists(path):
         
