@@ -14,7 +14,7 @@ chroma_client = chromadb.Client()
 load_dotenv()
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 DIRECTORY_PATH='/Users/matansharon/python/chat_with_doc/AI_Apps/chat_with_pdf_V1/data'
-
+PERSIST_PATH='/Users/matansharon/python/chat_with_doc/AI_Apps/chat_with_pdf_V1/pdf_db'
 
 
 
@@ -56,21 +56,21 @@ def split_text(text:str):
 def create_new_db(chunks):
     print("in create db")
     
-    path='/Users/matansharon/python/chat_with_doc/AI_Apps/chat_with_pdf_V1/pdf_db'
+    
     # path=''
-    if not os.path.exists(path):
+    if not os.path.exists(PERSIST_PATH):
         
-        db=Chroma.from_texts(texts=[''],embedding=OpenAIEmbeddings(model='text-embedding-3-small'),persist_directory=path)
+        db=Chroma.from_texts(texts=[''],embedding=OpenAIEmbeddings(model='text-embedding-3-small'),persist_directory=PERSIST_PATH)
         return db
     if chunks:
         
-        db=Chroma.from_texts(texts=chunks,embedding=OpenAIEmbeddings(model='text-embedding-3-small'),persist_directory=path)
+        db=Chroma.from_texts(texts=chunks,embedding=OpenAIEmbeddings(model='text-embedding-3-small'),persist_directory=PERSIST_PATH)
         return db
     return load_db()
 
 def load_db():
     
-    db = Chroma(persist_directory='/Users/matansharon/python/chat_with_doc/AI_Apps/chroma_db',embedding_function=OpenAIEmbeddings(model='text-embedding-3-small'))
+    db = Chroma(persist_directory=PERSIST_PATH,embedding_function=OpenAIEmbeddings(model='text-embedding-3-small'))
     return db
 
 def get_results_with_scores(query,db):
