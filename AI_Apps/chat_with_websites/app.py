@@ -14,10 +14,10 @@ import os
 load_dotenv()
 _urls=[
 "https://en.wikipedia.org/wiki/2024_United_States_presidential_election",
-"https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfmaude/search.cfm",]
-# "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm",
-# "https://pubmed.ncbi.nlm.nih.gov/",
-# "https://ec.europa.eu/tools/eu"]
+"https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfmaude/search.cfm",
+"https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm",
+"https://pubmed.ncbi.nlm.nih.gov/",
+"https://ec.europa.eu/tools/eu"]
 
 #----------------------------------- Alejandro's code -----------------------------------
 # def get_vectorstore_from_url(url):
