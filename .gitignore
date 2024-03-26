@@ -5,3 +5,8 @@
 /data/
 /AI_Apps/chat_with_websites/chroma_db/
 /AI_Apps/chat_with_websites/website_db/
+/AI_Apps/chat_with_pdf_V1/pdf_db/
+/AI_Apps/pandas_ai/pandasai_venv/
+exports/
+cache/
+/Users/matansharon/python/chat_with_doc/pandasai.log
