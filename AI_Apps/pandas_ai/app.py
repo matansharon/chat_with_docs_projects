@@ -37,27 +37,39 @@ def init():
     st.session_state.smart_df=smart_df
 # 
 
-def main():
-    st.title('Chat with Excel Files Using PandasAI 🐼')
-    st.header('Ask me anything about the the excel files')
-    # st.chat_input("Ask me anything")
-    with st.sidebar:
-        st.write("## Database")
-        st.write("### Add new file")
-        file=st.file_uploader("Upload a file", type=["csv"])
-    
+
+st.set_page_config(page_title="Chat with Excel", page_icon="📈")
+st.title('Chat with Excel Files Using PandasAI 🐼')
+
+
+with st.sidebar:
+    st.write("## Database")
+    st.write("### Add new file")
+    # file=st.file_uploader("Upload a file", type=["csv"])
+
 if 'init' not in st.session_state:
-    init()
+    llm=OpenAI()
+    df=pd.read_csv('laptops.csv',encoding='ISO-8859-1')
+    st.session_state.llm=llm
+    st.session_state.df=df
+    smart_df=SmartDataframe(df,config={'llm':llm})
+    
+    st.session_state['smart_df']=smart_df
     st.session_state.init=True
-if 'df' in st.session_state:
-    st.write(st.session_state.df.head())
+    st.write('in init')
+if "chat_history" not in st.session_state:
+    st.session_state.chat_history = [
+        AIMessage(content="Hello, I am a bot. How can I help you?"),
+    ]
 user_input=st.chat_input("Ask me anything")
-if user_input and 'smart_df' in st.session_state:
+if user_input and user_input!="" and 'smart_df' in st.session_state and 'chat_history' in st.session_state:
     response=st.session_state.smart_df.chat(user_input)
-    st.write(response)
-        
-
-
-if __name__ == '__main__':
-    main()
+    st.session_state.chat_history.append(HumanMessage(content=user_input))
+    st.session_state.chat_history.append(AIMessage(content=response))
+    
+    for message in st.session_state.chat_history:
+        if isinstance(message,HumanMessage):
+            st.write(f"human: {message.content}")
+        else:
+            st.write(f"ai: {message.content}")
     
