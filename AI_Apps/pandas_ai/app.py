@@ -1,6 +1,6 @@
 import streamlit as st
 import os
-from langchain_core.messages import AIMessage, HumanMessage
+
 
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores.chroma import Chroma
@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain.chains import create_history_aware_retriever, create_retrieval_chain
 from langchain.chains.combine_documents import create_stuff_documents_chain
-from langchain_core.messages import AIMessage, HumanMessage, ChatMessage
+from langchain_core.messages import AIMessage, HumanMessage
 from langchain_community.vectorstores.chroma import Chroma
 
 
@@ -56,7 +56,8 @@ if 'init' not in st.session_state:
     
     st.session_state['smart_df']=smart_df
     st.session_state.init=True
-    st.write('in init')
+    
+    
 if "chat_history" not in st.session_state:
     st.session_state.chat_history = [
         AIMessage(content="Hello, I am a bot. How can I help you?"),
@@ -65,11 +66,20 @@ user_input=st.chat_input("Ask me anything")
 if user_input and user_input!="" and 'smart_df' in st.session_state and 'chat_history' in st.session_state:
     response=st.session_state.smart_df.chat(user_input)
     st.session_state.chat_history.append(HumanMessage(content=user_input))
-    st.session_state.chat_history.append(AIMessage(content=response))
-    
+    try:
+        
+        st.session_state.chat_history.append(AIMessage(content=response))
+    except:
+        st.session_state.chat_history.append(AIMessage(content="here is the answer: ",additional_kwargs={"content":response}))
+        
+if "chat_history" in st.session_state:
     for message in st.session_state.chat_history:
-        if isinstance(message,HumanMessage):
-            st.write(f"human: {message.content}")
-        else:
-            st.write(f"ai: {message.content}")
+        if isinstance(message, AIMessage):
+            with st.chat_message("AI"):
+                st.write(message.content)
+                if message.additional_kwargs:
+                    st.write(message.additional_kwargs.get("content"))
+        elif isinstance(message, HumanMessage):
+            with st.chat_message("Human"):
+                st.write(message.content)
     
