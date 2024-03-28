@@ -11,7 +11,7 @@ from langchain.chains import create_history_aware_retriever, create_retrieval_ch
 from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain_core.messages import AIMessage, HumanMessage
 from langchain_community.vectorstores.chroma import Chroma
-
+import PyPDF2
 
 from langchain_community.utilities import SQLDatabase
 from sqlalchemy import create_engine
@@ -48,12 +48,29 @@ def main():
     with st.sidebar:
         file=st.file_uploader("Upload a .pdf file", type=["pdf","csv",'mp3'])
         if file:
-            st.session_state['file']=file
+            if file.type=="application/pdf":
+                st.session_state['pdf_file']=file
+            elif file.type=="text/csv":
+                st.session_state['csv_file']=file
+            elif file.type=="audio/mpeg":
+                st.session_state['audio_file']=file
+                
+                
+            
             
         #add a dropdown menu to select the app
-        app=st.selectbox("Select the app you want to use",["Chat with PDF","Chat with Audio",'Chat with CSV'])
-        if app:
-            st.write(app)
+        st.session_state.app=st.selectbox("Select the app you want to use",["Chat with PDF","Chat with Audio",'Chat with CSV'])
+    if st.session_state.app:
+        if st.session_state.app=="Chat with PDF" and st.session_state.pdf_file:
+            # text=PyPDF2.PdfReader(st.session_state.pdf_file)
+            st.write(st.session_state.pdf_file)
+            pages=PyPDF2.PdfReader(st.session_state.pdf_file).pages
+            text=""
+            for page in pages:
+                text+=page.extract_text()
+            st.write('len of the uploaded text is: ',len(text))
+            
+            
     
     
 
@@ -61,6 +78,7 @@ def main():
 
     user_input=st.chat_input("Ask me Anything about the documents")
     if user_input:
+        
         response=st.session_state.llm.invoke(f"base your answer on the following input {user_input}")
         st.session_state.chat_history.append(HumanMessage(user_input))
         st.session_state.chat_history.append(AIMessage(response.content))
