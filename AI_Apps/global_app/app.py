@@ -12,8 +12,20 @@ def main():
         file=st.file_uploader("Upload a .pdf file", type=["pdf","csv",'mp3'])
         if file:
             st.session_state['file']=file
+            
+        #add a dropdown menu to select the app
+        app=st.selectbox("Select the app you want to use",["Chat with PDF","Chat with Audio",'Chat with CSV'])
+        if app:
+            st.write(app)
     if 'file' in st.session_state:
         st.write(file.type)
+    
+    
+    user_input=st.chat_input("Ask me Anything about the documents")
+    if user_input:
+        st.write(user_input)
+        
+    
     
         
 if __name__=="__main__":
