@@ -1,6 +1,26 @@
 import streamlit as st
 import os
 from dotenv import load_dotenv
+
+from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_community.vectorstores.chroma import Chroma
+from langchain_openai import OpenAIEmbeddings, ChatOpenAI
+from dotenv import load_dotenv
+from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
+from langchain.chains import create_history_aware_retriever, create_retrieval_chain
+from langchain.chains.combine_documents import create_stuff_documents_chain
+from langchain_core.messages import AIMessage, HumanMessage
+from langchain_community.vectorstores.chroma import Chroma
+
+
+from langchain_community.utilities import SQLDatabase
+from sqlalchemy import create_engine
+from langchain_community.agent_toolkits import create_sql_agent
+from langchain_openai import ChatOpenAI
+import pandas as pd
+from pandasai.llm import OpenAI
+from dotenv import load_dotenv
+from pandasai import SmartDataframe,SmartDatalake
 load_dotenv()
 
 def main():
@@ -20,10 +40,17 @@ def main():
     if 'file' in st.session_state:
         st.write(file.type)
     
-    
+    llm=ChatOpenAI(model_name='gpt-4-turbo-preview')
+    # st.write(llm)
     user_input=st.chat_input("Ask me Anything about the documents")
     if user_input:
-        st.write(user_input)
+        # st.write(f"You: {user_input}")
+        with st.chat_message("Human"):
+                    st.write(f"AI: {user_input}")
+        response=llm.invoke(f"base your answer on the following input {user_input}")
+        # st.write(f"AI: {response.content}")
+        with st.chat_message("AI"):
+                    st.write(f"AI: {response.content}")
         
     
     
