@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores.chroma import Chroma
 from langchain_openai import OpenAIEmbeddings, ChatOpenAI
-from dotenv import load_dotenv
+
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain.chains import create_history_aware_retriever, create_retrieval_chain
 from langchain.chains.combine_documents import create_stuff_documents_chain
@@ -19,16 +19,17 @@ from langchain_community.agent_toolkits import create_sql_agent
 from langchain_openai import ChatOpenAI
 import pandas as pd
 from pandasai.llm import OpenAI
-from dotenv import load_dotenv
+
 from pandasai import SmartDataframe,SmartDatalake
+from youtube_transcript_api import YouTubeTranscriptApi 
 load_dotenv()
 
 
 
 def init():
     st.session_state['init']=True
-    # st.session_state['llm']=ChatOpenAI()
-    st.session_state['llm']=ChatOpenAI(model_name='gpt-4-turbo-preview')
+    st.session_state['llm']=ChatOpenAI()
+    # st.session_state['llm']=ChatOpenAI(model_name='gpt-4-turbo-preview')
     st.session_state['pandas_llm']=OpenAI()
     st.session_state['pdf_file']=None
     st.session_state['csv_file']=None
@@ -51,6 +52,8 @@ def Write_UI():
     
     st.subheader("This app is designed to help you navigate between the different AI apps")
     st.write("#### Please select the app you want to use from the sidebar")
+    
+    
     with st.sidebar:
         file=st.file_uploader("Upload a file", type=["pdf","csv",'mp3'])
         if file:
@@ -62,7 +65,15 @@ def Write_UI():
                 st.session_state['csv_file']=file
             elif file.type=="audio/mpeg":
                 st.session_state['audio_file']=file
-        st.session_state.app=st.selectbox("Select the app you want to use",["Chat with PDF","Chat with Audio",'Chat with CSV'],)
+            else:
+                # st.write("Unsupported file type")
+                st.write(file.type)
+            
+        st.session_state.app=st.selectbox("Select the app you want to use",["Chat with PDF","Chat with Audio",'Chat with CSV','Chat with youtube'],)
+        url=st.text_input("Enter the youtube video url")
+        if url:
+            
+            st.write(url)
     display_chat_history()
         
 def display_chat_history():
@@ -86,6 +97,8 @@ def handel_pdf(file):
                 
                 st.write('len of the uploaded text is: ',len(text))
                 return text
+
+
 def handel_audio():
     pass
 def handel_csv():
@@ -118,6 +131,7 @@ def main():
             st.session_state.chat_history.append(AIMessage(response))
             # st.write(get_response(user_input))
             display_chat_history()
+        # elif st.session_state.app=="Chat with Audio":
             
             
         
