@@ -20,7 +20,7 @@ from langchain_openai import ChatOpenAI
 import pandas as pd
 from pandasai.llm import OpenAI
 from dotenv import load_dotenv
-from pandasai import SmartDataframe
+from pandasai import SmartDataframe,SmartDatalake
 
 
 
@@ -33,8 +33,9 @@ def init():
     st.session_state.llm=llm
     st.session_state.df=df
     smart_df=SmartDataframe(df,config={'llm':llm})
-    
+    smart_lake=SmartDatalake([df,df2],config={'llm':llm})
     st.session_state.smart_df=smart_df
+    st.session_state.smart_lake=smart_lake
 # 
 
 
@@ -49,13 +50,16 @@ with st.sidebar:
 
 if 'init' not in st.session_state:
     llm=OpenAI()
-    df=pd.read_csv('laptops.csv',encoding='ISO-8859-1')
+    df=pd.read_csv('/Users/matansharon/python/chat_with_doc/AI_Apps/pandas_ai/laptops.csv',encoding='ISO-8859-1')
+    df2=pd.read_csv('/Users/matansharon/python/chat_with_doc/AI_Apps/pandas_ai/Sales Summary.csv',encoding='ISO-8859-1')
     st.session_state.llm=llm
     st.session_state.df=df
     smart_df=SmartDataframe(df,config={'llm':llm})
     
     st.session_state['smart_df']=smart_df
+    st.session_state['smart_lake']=SmartDatalake([df,df2],config={'llm':llm})
     st.session_state.init=True
+    
     
     
 if "chat_history" not in st.session_state:
@@ -64,7 +68,7 @@ if "chat_history" not in st.session_state:
     ]
 user_input=st.chat_input("Ask me anything")
 if user_input and user_input!="" and 'smart_df' in st.session_state and 'chat_history' in st.session_state:
-    response=st.session_state.smart_df.chat(user_input)
+    response=st.session_state.smart_lake.chat(user_input)
     st.session_state.chat_history.append(HumanMessage(content=user_input))
     try:
         
