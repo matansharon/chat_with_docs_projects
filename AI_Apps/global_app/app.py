@@ -10,7 +10,7 @@ from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain.chains import create_history_aware_retriever, create_retrieval_chain
 from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain_core.messages import AIMessage, HumanMessage
-from langchain_community.vectorstores.chroma import Chroma
+
 import PyPDF2
 
 from langchain_community.utilities import SQLDatabase
@@ -18,10 +18,11 @@ from sqlalchemy import create_engine
 from langchain_community.agent_toolkits import create_sql_agent
 from langchain_openai import ChatOpenAI
 import pandas as pd
-from pandasai.llm import OpenAI
+from pandasai.llm import OpenAI as SmartOpenAI
+from openai import OpenAI
 
 from pandasai import SmartDataframe,SmartDatalake
-from youtube_transcript_api import YouTubeTranscriptApi 
+
 load_dotenv()
 
 
@@ -70,10 +71,7 @@ def Write_UI():
                 st.write(file.type)
             
         st.session_state.app=st.selectbox("Select the app you want to use",["Chat with PDF","Chat with Audio",'Chat with CSV','Chat with youtube'],)
-        url=st.text_input("Enter the youtube video url")
-        if url:
-            
-            st.write(url)
+        
     display_chat_history()
         
 def display_chat_history():
@@ -100,7 +98,17 @@ def handel_pdf(file):
 
 
 def handel_audio():
-    pass
+    
+    audio_file = open(st.session_state.audio_file.name, "rb")
+    # return audio_file
+    client=OpenAI()
+    transcription = client.audio.transcriptions.create(
+        
+    model="whisper-1", 
+    file=audio_file, 
+    response_format="text"
+    )
+    return transcription
 def handel_csv():
     pass
 
@@ -108,7 +116,12 @@ def get_response(query):
     if st.session_state.app=="Chat with PDF":
         response=st.session_state.llm.invoke(f"base your answer on the following context {st.session_state['pdf_file']} and answer the following query: {query}")
 
-    return response.content
+        return response.content
+    elif st.session_state.app=="Chat with Audio":
+        transcription=handel_audio()
+        response=st.session_state.llm.invoke(f"base your answer on the following context {transcription} and answer the following query: {query}")
+
+        return response.content
 
 
 
@@ -131,7 +144,12 @@ def main():
             st.session_state.chat_history.append(AIMessage(response))
             # st.write(get_response(user_input))
             display_chat_history()
-        # elif st.session_state.app=="Chat with Audio":
+        elif st.session_state.app=="Chat with Audio" and st.session_state.audio_file is not None:
+            transcription=handel_audio()
+            st.write(transcription)
+
+
+            
             
             
         
