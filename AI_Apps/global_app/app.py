@@ -31,7 +31,7 @@ def init():
     st.session_state['init']=True
     st.session_state['llm']=ChatOpenAI()
     # st.session_state['llm']=ChatOpenAI(model_name='gpt-4-turbo-preview')
-    st.session_state['pandas_llm']=OpenAI()
+    st.session_state['pandas_llm']=SmartOpenAI()
     st.session_state['pdf_file']=None
     st.session_state['csv_file']=None
     st.session_state['audio_file']=None
@@ -75,7 +75,7 @@ def Write_UI():
         st.session_state.website_url=st.text_input("Enter a website url")
         st.session_state.app=st.selectbox("Select the app you want to use",["Chat with PDF","Chat with Audio",'Chat with CSV','Chat with Website'],)
         
-    display_chat_history()
+    
         
 def display_chat_history():
     for message in st.session_state.chat_history:
@@ -123,7 +123,7 @@ def get_response(query):
     elif st.session_state.app=="Chat with Audio":
         transcription=handel_audio()
         response=st.session_state.llm.invoke(f"base your answer on the following context {transcription} and answer the following query: {query}")
-
+        st.session_state.transcription=transcription
         return response.content
 
 
@@ -143,26 +143,27 @@ def main():
     if user_input:
         if st.session_state.app=="Chat with PDF":
             if st.session_state.pdf_file is None:
-                st.write("Please upload a pdf file")
+                st.session_state.chat_history.append(AIMessage('Please upload a pdf file'))
+                
             else:
                 response=get_response(user_input)
                 st.session_state.chat_history.append(HumanMessage(user_input))
                 st.session_state.chat_history.append(AIMessage(response))
                 # st.write(get_response(user_input))
-                display_chat_history()
+            
         elif st.session_state.app=="Chat with Audio":
             if st.session_state.audio_file is None:
-                st.write("Please upload an audio file")
+                st.session_state.chat_history.append(AIMessage('Please upload a audio file'))
             else:
-                transcription=handel_audio()
-                st.session_state['transcription']=transcription
-                response=st.session_state.llm.invoke(f"base your answer on the following context {transcription} and answer the following query: {user_input}")
+                
+                
+                response=get_response(user_input)
                 st.session_state.chat_history.append(HumanMessage(user_input))
-                st.session_state.chat_history.append(AIMessage(response.content))
-                display_chat_history()
+                st.session_state.chat_history.append(AIMessage(response))
+            
         elif st.session_state.app=="Chat with CSV":
             if st.session_state.csv_file is None:
-                st.write("Please upload a csv file")
+                st.session_state.chat_history.append(AIMessage('Please upload a csv file'))
             # else:
             #     response=get_response(user_input)
             #     st.session_state.chat_history.append(HumanMessage(user_input))
@@ -170,13 +171,14 @@ def main():
             #     display_chat_history()
         elif st.session_state.app=="Chat with Website":
             if st.session_state.website_url is None:
-                st.write("Please enter a website url")
+                st.session_state.chat_history.append(AIMessage('Please enter a website url'))
             else:
                 st.write("Chat with website")
             #     response=get_response(user_input)
             #     st.session_state.chat_history.append(HumanMessage(user_input))
             #     st.session_state.chat_history.append(AIMessage(response))
             #     display_chat_history()
+    display_chat_history()
             
             
             
