@@ -18,7 +18,7 @@ from sqlalchemy import create_engine
 from langchain_community.agent_toolkits import create_sql_agent
 from langchain_openai import ChatOpenAI
 import pandas as pd
-from pandasai.llm import OpenAI as SmartOpenAI
+from pandasai.llm import OpenAI as pandas_openai
 from openai import OpenAI
 
 from pandasai import SmartDataframe,SmartDatalake
@@ -31,7 +31,7 @@ def init():
     st.session_state['init']=True
     st.session_state['llm']=ChatOpenAI()
     # st.session_state['llm']=ChatOpenAI(model_name='gpt-4-turbo-preview')
-    st.session_state['pandas_llm']=SmartOpenAI()
+    st.session_state['pandas_llm']=pandas_openai()
     st.session_state['pdf_file']=None
     st.session_state['csv_file']=None
     st.session_state['audio_file']=None
@@ -85,6 +85,8 @@ def display_chat_history():
         else:
             with st.chat_message("AI"):
                 st.write(f"AI: {message.content}")
+                if message.additional_kwargs:
+                    st.write(message.additional_kwargs.get("content"))
 
 def handel_pdf(file):
     if st.session_state.app:
@@ -113,7 +115,8 @@ def handel_audio():
     )
     return transcription
 def handel_csv():
-    pass
+    st.session_state['smart_df']=SmartDataframe(pd.read_csv(st.session_state.csv_file),config={'llm':st.session_state.pandas_llm})
+    
 
 def get_response(query):
     if st.session_state.app=="Chat with PDF":
@@ -125,7 +128,9 @@ def get_response(query):
         response=st.session_state.llm.invoke(f"base your answer on the following context {transcription} and answer the following query: {query}")
         st.session_state.transcription=transcription
         return response.content
-
+    elif st.session_state.app=="Chat with CSV":
+        response= st.session_state.smart_df.chat(query)
+        return response
 
 
 
@@ -164,11 +169,16 @@ def main():
         elif st.session_state.app=="Chat with CSV":
             if st.session_state.csv_file is None:
                 st.session_state.chat_history.append(AIMessage('Please upload a csv file'))
-            # else:
-            #     response=get_response(user_input)
-            #     st.session_state.chat_history.append(HumanMessage(user_input))
-            #     st.session_state.chat_history.append(AIMessage(response))
-            #     display_chat_history()
+            else:
+                handel_csv()
+                response=get_response(user_input)
+                
+                st.session_state.chat_history.append(HumanMessage(user_input))
+                try:
+                    st.session_state.chat_history.append(AIMessage(response))
+                except:
+                    st.session_state.chat_history.append(AIMessage("here is the answer: ",additional_kwargs={"content":response}))
+                
         elif st.session_state.app=="Chat with Website":
             if st.session_state.website_url is None:
                 st.session_state.chat_history.append(AIMessage('Please enter a website url'))
@@ -179,18 +189,6 @@ def main():
             #     st.session_state.chat_history.append(AIMessage(response))
             #     display_chat_history()
     display_chat_history()
-            
-            
-            
 
-
-            
-            
-            
-        
-    
-    #display the chat history
-    
-        
 if __name__=="__main__":
     main()
