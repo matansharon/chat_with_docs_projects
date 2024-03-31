@@ -29,8 +29,8 @@ load_dotenv()
 
 def init():
     st.session_state['init']=True
-    # st.session_state['llm']=ChatOpenAI()
-    st.session_state['llm']=ChatOpenAI(model_name='gpt-4-turbo-preview')
+    st.session_state['llm']=ChatOpenAI()
+    # st.session_state['llm']=ChatOpenAI(model_name='gpt-4-turbo-preview')
     st.session_state['pandas_llm']=pandas_openai()
     st.session_state['pdf_file']=None
     st.session_state['csv_file']=None
