@@ -1,0 +1,525 @@
+Source: https:\\www.accessdata.fda.gov\scripts\cdrh\cfdocs\cfpmn\pmn.cfm
+
+
+
+
+
+
+
+
+510(k) Premarket Notification
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Quick Links: Skip to main page content
+Skip to Search
+Skip to Topics Menu
+Skip to Common Links
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                U.S. Food & Drug Administration
+              
+
+ 
+
+
+
+
+
+
+
+Follow FDA
+En Español
+
+
+
+
+
+Search FDA
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+Home
+Food
+Drugs
+Medical Devices
+Radiation-Emitting Products
+Vaccines, Blood & Biologics
+Animal & Veterinary
+Cosmetics
+Tobacco Products
+
+
+ 
+
+
+
+ 
+ 
+
+510(k) Premarket Notification
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+FDA Home
+Medical Devices
+Databases
+
+
+
+
+
+ -
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A 510(K) is a premarket submission made to FDA to demonstrate that the device to be marketed is as safe and effective, that is, substantially equivalent, to a legally marketed device (section 513(i)(1)(A) FD&C Act) that is not subject to premarket approval.
+Learn more...
+
+
+
+
+
+Search Database
+
+Help
+
+Download Files
+
+
+
+
+
+
+
+
+510K Number
+
+
+
+
+
+
+
+Type 
+						
+
+Traditional
+Special
+Abbreviated
+
+
+
+Product Code 
+
+
+
+
+
+
+Center
+
+
+
+Biologics Evaluation and Research
+					Devices and Radiological Health
+				
+
+
+Combination Products
+					 
+					
+
+
+
+Applicant Name
+
+
+Cleared/Approved In Vitro Products 
+
+
+
+Device Name
+
+
+Redacted FOIA 510(k) 
+
+
+
+Panel
+
+
+
+Anesthesiology
+General Hospital
+Ear Nose & Throat
+General & Plastic Surgery
+Immunology
+Ophthalmic
+Radiology
+Cardiovascular
+Gastroenterology/Urology
+Microbiology
+Orthopedic
+Clinical Chemistry
+Neurology
+Pathology
+Toxicology
+Dental
+Hematology
+Obstetrics/Gynecology
+Physical Medicine
+Molecular Genetics
+
+
+
+Third Party Reviewed
+					 
+					
+
+
+
+Decision
+
+
+
+SE - POSTMARKET SURVEILLANCE REQUIRED (SESP)
+						SE - WITH LIMITATIONS (SESU)
+						SE SUBJECT TO TRACKING REG (ST)
+						SE SUBJECT TO TRAKING & PMS (PT)
+						SUBST EQUIV (SESE)
+						SUBST EQUIV - KIT (SESK)
+						SUBST EQUIV - KIT WITH DRUGS (SEKD)
+						SUBST EQUIV - MARKET AFTER INSPECTION (SI)
+						SUBST EQUIV - WITH DRUG (SESD)
+						SUBST EQUIV FOR SOME INDICATIONS (SN)
+					
+
+
+
+Decision Date
+
+
+
+
+ 
+
+
+to  
+					
+
+ 
+
+
+Clinical Trials
+						 
+						
+
+
+
+
+
+
+Sort by
+
+
+
+
+
+Decision Date (descending)
+					Decision Date (ascending) 
+					Device Name (A-Z)
+					Device Name (Z-A)
+					Applicant Name (A-Z)
+					Applicant Name (Z-A)
+					510(k) Number (descending)
+					510(k) Number (ascending)
+					
+
+
+
+
+
+
+
+Quick Search  
+				
+
+Clear Form
+					    
+					
+					  
+				
+
+
+
+
+
+
+
+
+
+Other Databases
+
+De Novo
+Medical Device Reports (MAUDE)
+CDRH Export Certificate Validation (CECV)
+CDRH FOIA Electronic Reading Room
+CFR Title 21
+CLIA
+Device Classification
+FDA Guidance Documents 
+Humanitarian Device Exemption 
+Medsun Reports
+Premarket Approvals (PMAs)
+Post-Approval Studies
+Postmarket Surveillance Studies
+Radiation-Emitting Products
+Radiation-Emitting Electronic Products Corrective Actions
+Recalls
+Registration & Listing
+Standards
+Total Product Life Cycle
+X-Ray Assembler
+
+
+
+
+
+
+-
+
+
+
+-
+
+
+
+
+
+
+
+
+Links on this page:
+
+
+
+
+Page Last Updated: 04/01/2024
+
+      Note: If you need help accessing information in different file formats, see
+      Instructions for Downloading Viewers and Players.
+Language Assistance Available: Español | 繁體中文 | Tiếng Việt | 한국어 | Tagalog | Русский | العربية | Kreyòl Ayisyen | Français | Polski | Português | Italiano | Deutsch | 日本語 | فارسی | English
+
+
+
+
+
+
+
+
+Accessibility
+Contact FDA
+Careers
+FDA Basics
+FOIA
+No FEAR Act
+Nondiscrimination
+Website Policies / Privacy
+
+
+
+
+
+
+
+
+
+
+U.S. Food and Drug Administration
+
+              10903 New Hampshire Avenue 
+              Silver Spring, MD 20993 
+              Ph. 1-888-INFO-FDA (1-888-463-6332)
+Contact FDA
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+For Government
+For Press
+
+
+
+
+
+
+Combination Products
+Advisory Committees
+Science & Research
+Regulatory Information
+Safety
+Emergency Preparedness
+International Programs
+News & Events
+Training and Continuing Education
+Inspections/Compliance
+State & Local Officials
+Consumers
+Industry
+Health Professionals
+FDA Archive
+Vulnerability Disclosure Policy
+
+
+
+
+
+
+ 
+
+
+
+Links on this page:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

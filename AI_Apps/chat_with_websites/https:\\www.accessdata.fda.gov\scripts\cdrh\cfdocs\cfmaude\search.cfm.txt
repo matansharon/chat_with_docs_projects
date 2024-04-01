@@ -1,0 +1,3077 @@
+Source: https:\\www.accessdata.fda.gov\scripts\cdrh\cfdocs\cfmaude\search.cfm
+
+
+
+
+
+ 
+
+
+
+MAUDE - Manufacturer and User Facility Device Experience
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Quick Links: Skip to main page content
+Skip to Search
+Skip to Topics Menu
+Skip to Common Links
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                U.S. Food & Drug Administration
+              
+
+ 
+
+
+
+
+
+
+
+Follow FDA
+En Español
+
+
+
+
+
+Search FDA
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+Home
+Food
+Drugs
+Medical Devices
+Radiation-Emitting Products
+Vaccines, Blood & Biologics
+Animal & Veterinary
+Cosmetics
+Tobacco Products
+
+
+ 
+
+
+
+ 
+ 
+
+MAUDE - Manufacturer and User Facility Device Experience
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+FDA Home
+Medical Devices
+Databases
+
+
+
+
+
+ -
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			The MAUDE database houses medical device reports submitted to the FDA by mandatory reporters 1 (manufacturers, importers and device user facilities) and voluntary reporters such as health care professionals, patients and consumers.
+			
+
+
+Learn More
+
+
+Disclaimer
+
+
+
+
+
+
+
+Search Database
+
+Help
+
+Download Files
+
+
+
+
+
+
+
+
+
+Product Problem
+
+
+
+
+abnormal
+aborted charge
+absorption
+accessory incompatible
+activation failure
+activation problem
+activation, positioning or separation problem
+adaptor, failure of
+adhesive too strong
+adverse event without identified device or use problem
+air eliminator, defective
+air leak
+air/gas in device
+alarm not visible
+alarm system, failure of check-catheter
+alarm system, failure of gas-leak/loss
+alarm system, failure of message-battery status
+alarm, audible
+alarm, error of warning
+alarm, failure of warning
+alarm, intermittent
+alarm, no lead
+altitude variations
+ambient noise problem
+ambient temperature problem
+antenna, failure of
+application interface becomes non-functional or program exits abnormally
+application network problem
+application program freezes, becomes nonfunctional
+application program problem
+application program problem: dose calculation error
+application program problem: medication error
+application program problem: parameter calculation error
+application program problem: power calculation error
+application program version or upgrade problem
+application security problem
+applicator failure
+appropriate term/code not available
+arcing
+arcing at paddles
+arcing of electrodes
+aspiration issue
+aspiration, excessive
+aspiration, incomplete
+audible prompt/feedback problem
+automatic injection system overinfusion
+backflow
+balloon asymmetrical
+balloon burst
+balloon leak(s)
+balloon mushroomed
+balloon pinhole
+balloon rupture
+battery charger, defective
+battery failure
+battery impedance issue
+battery problem
+battery problem: high impedance
+battery problem: low impedance
+bent
+bicarbonate
+biocompatibility
+biofilm coating in device
+biological environmental factor
+blank screen
+blocked connection
+blood gas measurements, erroneous
+blood in tubing
+blood pooling
+bolus mechanism failure
+break
+bubble(s)
+burn hole(s)
+burst container or vessel
+cable break
+cable, defective
+calcified
+calibration error
+calibration problem
+cannula guide, needle insertion difficult
+capacitative coupling
+capturing problem
+carbon absorption
+cardiac enzyme evaluation, erroneous
+cautery
+central regurgitation
+changes in ambient temperature in device environment
+channeling
+charging problem
+charred
+chemical problem
+chemical spillage
+circuit breaker tripped
+circuit failure
+clips, scissored
+close, difficult to
+clumping in device or device ingredient
+coagulation in device or device ingredient
+coiled
+collapse
+collimator design problem
+color variation, lens
+communication or transmission problem
+compatibility
+compatibility problem
+complete blockage
+complete loss of power
+component falling
+component incompatible
+component misassembled
+component missing
+component or accessory incompatibility
+component(s), broken
+component(s), overheating of
+component(s), worn
+computer failure
+computer hardware error
+computer operating system problem
+computer software problem
+computer system security problem
+conductivity
+connection error
+connection problem
+contamination
+contamination /decontamination problem
+contamination of device ingredient or reagent
+continuous firing
+cool, failure to
+corroded
+couple, failure to
+crack
+cross connection
+cross reactivity
+cuff degeneration
+cut in material
+cutoff point
+cutter-torque-cable twisted or tangled
+data back-up problem
+data problem
+date/time-related software problem
+decoupling
+decrease in pressure
+decrease in suction
+decreased pump speed
+decreased sensitivity
+defective alarm
+defective component
+defective device
+defibrillation/stimulation problem
+deflation due to trauma
+deflation problem
+deflation, cause unknown
+deformation due to compressive stress
+degraded
+delamination
+delayed alarm
+delayed charge time
+delayed program or algorithm execution
+delivered as unsterile product
+delivery system failure
+delivery system issue, no description
+dent in material
+deprimed
+design/structure problem
+detachment of device component
+detachment of device or device component
+deterioration of prosthesis
+device abrasion from instrument or another object
+device alarm system
+device appears to trigger rejection
+device contaminated at the user facility
+device contaminated during manufacture or shipping
+device contamination with biological material
+device contamination with body fluid
+device contamination with chemical or other material
+device damaged by another device
+device damaged prior to use
+device difficult to maintain
+device difficult to program or calibrate
+device difficult to setup or prepare
+device disinfection or sterilization issue
+device dislodged or dislocated
+device displays incorrect message
+device emits odor
+device expiration issue
+device fell
+device handling problem
+device ingredient or reagent problem
+device inoperable
+device issue
+device maintenance issue
+device markings/labelling problem
+device misassembled during manufacturing /shipping
+device operates differently than expected
+device operational issue
+device or device fragments location unknown
+device packaging compromised
+device remains activated
+device remains implanted
+device reprocessing problem
+device rinsing issue
+device sensing problem
+device slipped
+device stenosis
+device stops intermittently
+device tipped over
+device unsafe to use in environment
+device, or device fragments remain in patient
+device, removal of (non-implant)
+device-device incompatibility
+difficult or delayed activation
+difficult or delayed positioning
+difficult or delayed separation
+difficult to advance
+difficult to flush
+difficult to fold, unfold or collapse
+difficult to insert
+difficult to interrogate
+difficult to open or close
+difficult to open or remove packaging material
+difficult to position
+difficult to remove
+disassembly
+disconnection
+disengaged
+dislocated
+dislodged
+displacement
+display difficult to read
+display or visual feedback problem
+disposable
+dissection
+distilled water, contaminated
+dome collapse
+drift
+dull, blunt
+ejection problem
+ekg/ecg analysis, failure to perform
+elective removal
+elective replacement
+electrical /electronic property problem
+electrical overstress
+electrical power problem
+electrical shorting
+electrical wires, defective
+electro-magnetic interference (emi), compatibility/incompatibility
+electro-static discharge
+electrode(s), failure of
+electrode(s), fracture of
+electromagnetic compatibility problem
+electromagnetic interference
+electronic property issue
+emergency power failure
+emergency stop button or switch failure
+energy output problem
+energy output to patient tissue incorrect
+energy spectrum incorrect
+entrapment of device
+environmental compatibility problem
+environmental particulates
+erratic or intermittent display
+erratic results
+error or warning message, failure to produce
+escape
+excess flow or over-infusion
+excessive cooling
+excessive heating
+expiration date error
+explanted
+explode
+explosion
+expulsion
+external fiberoptic break
+extra components
+extrusion
+facilities issue
+fail-safe design failure
+fail-safe did not operate
+fail-safe problem
+failure of device to self-test
+failure to adhere or bond
+failure to advance
+failure to align
+failure to analyze signal
+failure to auto stop
+failure to back-up
+failure to calibrate
+failure to capture
+failure to charge
+failure to clean adequately
+failure to conduct
+failure to convert rhythm
+failure to convert to back-up
+failure to cut
+failure to cycle
+failure to deflate
+failure to deliver
+failure to deliver energy
+failure to deliver shock/stimulation
+failure to discharge
+failure to disconnect
+failure to disinfect
+failure to eject
+failure to fire
+failure to fold
+failure to form staple
+failure to infuse
+failure to interrogate
+failure to obtain sample
+failure to osseointegrate
+failure to power up
+failure to prime
+failure to pump
+failure to read input signal
+failure to recalibrate
+failure to reset
+failure to run on ac/dc
+failure to run on battery
+failure to seal
+failure to select signal
+failure to sense
+failure to service
+failure to shut off
+failure to transmit record
+failure to unfold or unwrap
+failure to unwrap
+failure to zero
+failure, intermittent
+false alarm
+false claim
+false device output
+false negative result
+false positive result
+false reading from device non-compliance
+fiberoptic break/separation
+fiberoptic cladding material separation
+fibrosis
+filling problem
+film processing, inadequate
+filter
+filter break(s)
+filter leak(s)
+filter tear(s)
+filter, inadequate
+filtration problem
+fire
+firing problem
+fitting problem
+flaked
+flammable
+flare or flash
+flashpoint threshold met
+fluid/blood leak
+flushing problem
+fogging
+folded
+folding issue
+foreign material
+fracture
+free or unrestricted flow
+fumes or vapors
+function indicator light(s), failure of
+fungus in device environment
+fuse, blown
+gas delivery system failure
+gas output problem
+gas/air leak
+gel leak
+glass, shattered
+gradient increase
+grounding malfunction
+handpiece break
+handrest break
+haptic damaged in delivery system
+haptic(s), bent
+haptic(s), broken
+heat
+heat, failure to
+hermetic seal, loss of
+high capture threshold
+high flux rate
+high impedance
+high ph
+high readings
+high sensing threshold
+high test results
+hole in material
+hose line occlusion
+hose line rupture
+hot oil leak
+human factors issue
+human-device interface problem
+hybrid failure
+illegible information
+image display error/artifact
+image orientation incorrect
+image resolution poor
+image reversal
+impedance problem
+implant breakage or physical damage
+implant extrusion
+implant mobility nos (not otherwise specified)
+implant, removal of
+implant, repositioning of
+imprecision
+improper alarm
+improper chemical reaction
+improper device output
+improper flow or infusion
+improper or incorrect procedure or method
+inability to auto-fill
+inability to irrigate
+inaccurate delivery
+inaccurate dispensing
+inaccurate flow rate
+inaccurate information
+inaccurate synchronization
+inadequacy of device shape and/or size
+inadequate filtration process
+inadequate instructions for healthcare professional
+inadequate instructions for non-healthcare professional
+inadequate lighting
+inadequate lubrication
+inadequate or insufficient training
+inadequate service
+inadequate storage
+inadequate ultra filtration
+inadequate user interface
+inappropriate audible prompt/feedback
+inappropriate or unexpected reset
+inappropriate tactile prompt/feedback
+inappropriate waveform
+inappropriate/inadequate shock/stimulation
+inaudible or unclear audible prompt/feedback
+incomplete coaptation
+incomplete or inadequate connection
+incomplete or inadequate priming
+incomplete or missing packaging
+incorrect device or component shipped
+incorrect error code
+incorrect interpretation of signal
+incorrect measurement
+incorrect or inadequate test results
+incorrect software programming calculations
+incorrect, inadequate or imprecise result or readings
+increase in pressure
+increase in suction
+increased pump speed
+increased sensitivity
+inflation problem
+infusion or flow problem
+installation error
+installation-related problem
+insufficient cooling
+insufficient flow or under infusion
+insufficient heating
+insufficient information
+insulation degradation
+insulation failure
+insulation, detached
+insulation, discolored
+insulation, hole(s) in
+intended use for traditional use
+interference
+interference with monitoring device
+interference with pacemaker
+intermittent capture
+intermittent communication failure
+intermittent continuity
+intermittent energy output
+intermittent infusion
+intermittent loss of power
+intermittent program or algorithm execution
+intermittent shock/stimulation
+internal fixation, revision of
+interrogation problem
+intra-cavity procedure, fiberoptic break or fragmentation during
+intraprocedure, fire or flash during
+invalid sensing
+issue with displayed error message
+iud (intrauterine contraceptive device), removal of
+key or button unresponsive/not working
+kinetic
+kinked
+knotted
+labeling, missing
+labelling, instructions for use or training problem
+lack of effect
+lack of maintenance documentation or guidelines
+laser output, unintended
+laser pulse timing error
+laser tip separation
+lead(s), breakage of
+lead(s), burn(s) from
+lead(s), fracture of
+lead(s), shock from
+leaflet disc escape
+leaflet disruption, cause unknown
+leaflet fracture
+leak/splash
+lens (iol), defective, problem not specified
+lens (iol), dislocated intraocular
+lens (iol), migration of intraocular
+lens (iol), nicked, chipped
+lens (iol), scratch, mark on
+lens (iol), torn, split, cracked
+lens damaged in delivery system
+lens replacement
+lens stuck in delivery system
+lens washers, failure of
+lens, cloudy
+lens, damaged by cartridge
+lens, disc
+lens, malposition of
+lens, opacification of
+lens, repositioning of
+lens, stuck in cartridge
+lens, toric
+lens, vaulting
+light interference
+locking mechanism failure
+lockout mechanism failure
+looping
+loose
+loose or intermittent connection
+loosening of implant not related to bone-ingrowth
+loss of data
+loss of or failure to bond
+loss of osseointegration
+loss of power
+loss of threshold
+low audible alarm
+low battery
+low impedance
+low ph
+low readings
+low sensing threshold
+low test results
+magnet failure
+magnetic interference
+maintenance does not comply to manufacturers recommendations
+malfunction
+malposition of device
+manufacturing, packaging or shipping problem
+markings unclear
+markings, none
+material deformation
+material discolored
+material disintegration
+material distortion
+material erosion
+material fragmentation
+material frayed
+material integrity problem
+material invagination
+material opacification
+material perforation
+material protrusion/extrusion
+material puncture/hole
+material rupture
+material separation
+material split, cut or torn
+material too rigid or stiff
+material too soft/flexible
+material torqued
+material twisted/bent
+measurement system incompatibility
+measurements, inaccurate
+mechanical jam
+mechanical problem
+mechanics altered
+medical gas supply problem
+melted
+membrane leak(s)
+membrane tear(s)
+metal shedding debris
+method, improper/incorrect
+microbial contamination of device
+migration
+migration or expulsion of device
+milliamps (ma) rate, unable to increase
+mineralization
+misapplication
+misassembled
+misassembled during installation
+misassembly by users
+misassembly during maintenance/repair
+misconnection
+misfire
+misfocusing
+mislabeled
+misplacement
+missing information
+missing test results
+missing value reason
+moisture damage
+moisture or humidity problem
+monitor display alarm, failure of
+monitor failure
+motion detector failure
+motor failure
+mushroomed
+naturally worn
+needle, extra
+needle, separation
+needle, unsheathed
+no apparent adverse event
+no audible alarm
+no audible prompt/feedback
+no device output
+no display/image
+no fail-safe mechanism
+no flow
+no pacing
+no pressure
+no tactile prompts/feedback
+no telemetry
+no visual prompts/feedback
+noise
+noise, audible
+non reproducible results
+non-linear
+nonstandard device
+normal
+obstruction of flow
+occlusion within device
+occlusion, incorrect
+off-label use
+old to be deactivated
+operating system becomes nonfunctional
+operating system version or upgrade problem
+optical decentration
+optical discoloration
+optical distortion
+optical obstruction
+optical problem
+osseointegration problem
+other (for use when an appropriate device code cannot be identified)
+out-of-box failure
+output above specifications
+output below specifications
+output problem
+output, high
+output, low
+over-sensing
+overcorrection
+overdelivery
+overfill
+overheating of device
+pacemaker found in back-up mode
+pacing asynchronously
+pacing inadequately
+pacing intermittently
+pacing problem
+packaging problem
+pallet crack(s)
+paravalvular leak(s)
+partial blockage
+particulates
+patient data problem
+patient device interaction problem
+patient-device incompatibility
+peeled/delaminated
+percutaneous
+performance
+perivalvular leak
+ph, low
+phantom problem
+physical property issue
+physical resistance
+physical resistance/sticking
+pierce
+pipette, failure to aspirate
+pitted
+plunge
+plunger not aligned properly
+plunger override
+pocket stimulation
+poor gas exchange
+poor quality image
+poor visibility
+port leak(s)
+positioning failure
+positioning problem
+potentiometer readings, low
+powder leak
+power conditioning problem
+power problem
+pre or post-pumping problem
+precipitate in device or device ingredient
+premature activation
+premature discharge of battery
+premature elective replacement indicator
+premature end-of-life indicator
+premature explantation
+premature indicator activation
+premature separation
+premature system activation
+pressure problem
+pressure sensor failure
+pressure, insufficient
+priming problem
+probe failure
+problem with removal of enzymatic cleaner
+problem with software installation
+problem with sterilization
+product quality problem
+program or algorithm execution failure
+program or algorithm execution problem
+program, failure to
+programming issue
+protective measures problem
+pumping problem
+pumping stopped
+r on t phenomenon
+radiation leak
+radiation output failure
+radiation output problem
+radiation overexposure
+radiation overexposure
+radiation underexposure
+radiation underexposure
+radio signal problem
+radiofrequency interference (rfi)
+reaction
+receiver stimulator unit, failure of
+reflux within device
+repair
+replace
+reservoir
+reset problem
+residue after decontamination
+resistance, loss of
+respirator, detachment from
+restricted flow rate
+retraction problem
+reuse
+reverse osmosis
+runaway
+rupture due to capsulotomy
+rupture due to trauma
+rupture, cause unknown
+safety interlock(s) inadequate
+salt tablet(s), use of
+scratched material
+screw head(s), incorrect
+seal, defective
+seal, incorrect
+sediment filter problems
+sediment, precipitate or deposit in device or device ingredient
+self-activation or keying
+semiautomatic code, failure to override
+sensing intermittently
+sensor problems
+separation failure
+separation problem
+shaft break
+shaft, split
+sharp edges
+sharp/jagged/rough/etched/scratched
+shelf life exceeded
+shielding failure
+shielding, inadequate
+shipping damage or problem
+shock, electrical
+shock, failure to advise
+short fill
+shoulder support, detachment of
+shutter failure
+side rails, failure of
+signal artifact/noise
+smoking
+solder joint fracture
+source, detachment from
+source, incorrect
+source, leak(s) from
+sparking
+specialty beds, rips/tears in
+spillage, accidental
+split
+spring loading mechanism problem
+steering wire problem
+sterility
+sticking
+stopcock valve, failure of
+stretched
+strikethrough
+structural problem
+strut fracture
+suction failure
+suction problem
+superheat
+surgical graft, failure of
+suspect emi
+suture line disruption
+suture line separation
+syringe markings, incorrectly placed
+syringe, defective
+syringe, hole(s) in
+system fails to activate
+table collapse
+table, tilting
+tactile prompts/feedback
+tear, rip or hole in device packaging
+tears, rips, holes in device, device material
+telemetry discrepancy
+temperature problem
+therapeutic or diagnostic output failure
+therapy delivered to incorrect body area
+thermal decomposition of device
+thickening of material
+tidal volume fluctuations
+tip breakage
+torn material
+traditional use
+transducer failure
+transducer overheating
+transducer probe overheating
+trocar failure
+tube(s), buckling of
+tube(s), defective
+tube(s), splitting of
+unable to confirm conditions of use
+unable to obtain readings
+unauthorized access to computer system
+unclear information
+uncoiled
+under-sensing
+undercorrection
+undercorrection
+underdelivery
+unexpected color
+unexpected shutdown
+unexpected therapeutic results
+unexpected/unintended radiation output
+unfold, difficult to
+unintended application program shut down
+unintended arm motion
+unintended collision
+unintended compatibility
+unintended deflation
+unintended ejection
+unintended electrical shock
+unintended head motion
+unintended magnet quench
+unintended movement
+unintended power up
+unintended system motion
+unit inactivated
+unknown (for use when the device problem is not known)
+unraveled material
+unsealed device packaging
+unstable
+unstable capture threshold
+unwrap, difficult to
+use of device problem
+use of incorrect control/treatment settings
+vacuum, loss of
+valve(s), defective
+valve(s), failure of
+valve(s), sticking
+ventilation problem in device environment
+vibration
+visual prompts will not clear
+volume accuracy problem
+water softener regeneration cycle, mistiming of
+wedge filter problem
+wire(s), breakage of
+wireless communication problem
+wrinkled
+wrong label
+year 2000 (y2k) related problem
+
+
+
+
+
+Product Class
+
+
+
+
+ 1-Nitroso-2-Naphthol (Fluorometric), Free Tyrosine
+ 11-Dehydro Thromboxane B2 Kit, Urinary
+ 2,4-Dinitrofluorobenzene (Spectroscopic), Nitrogen (Amino-Ni...
+ 2,4-Dinitrophenylhydrazine, Lactate Dehydrogenase
+ 2009 H1n1 Influenza Virus (Swine Origin), Nucleic Acid Or An...
+ 21-Hydroxylase Antibody (21-Ohab)
+ 25-Oh-Vitamin D Mass Spectrometry Test System
+ 3d Laser Scanning System
+ 5-Amp-Phosphate Release (Colorimetric Test), 5'-Nucleotidase
+ 5-Fluorouracil Assay
+ A Chemical Vapor Sterilization Multivariable Chemical Indica...
+ Aberrometer, Ophthalmic
+ Ablation Catheter, Renal Denervation
+ Ablation System, High Intensity Focus Ultrasound (Hifu), Sof...
+ Ablation System, High Intensity Focused Ultrasound (Hifu), M...
+ Abnormal Breath Sound Device
+ Abnormal Hemoglobin Quantitation
+ Absorbable Collagen Hemostatic Agent With Thrombin
+ Absorbable Coronary Drug-Eluting Stent
+ Absorbable Lung Biopsy Plug
+ Absorbable Metallic Bone Fixation Fastener
+ Absorbable Synthetic Wound Dressing
+ Absorbent, Carbon-Dioxide
+ Absorber, Carbon-Dioxide
+ Absorber, Saliva, Paper
+ Abutment, Implant, Dental, Endosseous
+ Accelerator, Linear, Medical
+ Accessories To Examination Light
+ Accessories, A-V Shunt
+ Accessories, Arthroscopic
+ Accessories, Blood Circuit, Hemodialysis
+ Accessories, Catheter
+ Accessories, Catheter, G-U
+ Accessories, Cleaning Brushes, For Endoscope
+ Accessories, Cleaning, For Endoscope
+ Accessories, Fixation, Spinal Interlaminal
+ Accessories, Fixation, Spinal Intervertebral Body
+ Accessories, Germicide, Cleaning, For Endoscopes
+ Accessories, Implant, Dental, Endosseous
+ Accessories, Photographic, For Endoscope (Exclude Light Sour...
+ Accessories, Pump, Infusion
+ Accessories, Retractor, Dental
+ Accessories, Soft Lens Products
+ Accessories, Solution, Ultrasonic Cleaners For Lenses
+ Accessories, Traction
+ Accessories, Wheelchair
+ Accessory - Film Dosimetry System
+ Accessory Equipment, Cardiopulmonary Bypass
+ Accessory To Continuous Ventilator (Respirator)
+ Accessory, Assisted Reproduction
+ Accessory, Assisted Reproduction, Exempt
+ Accessory, Barium Sulfate, Methyl Methacrylate For Craniopla...
+ Accessory, Surgical Apparel
+ Accessory, System, External Fixator, Containing Antimicrobia...
+ Acetabular Cup Orientation System
+ Acetylcholine Chloride, Specific Reagent For Pseudo Cholines...
+ Acid Hematin
+ Acid Phosphatase (Prostatic), Tartrate Inhibited
+ Acid Phosphatase, Beta Glycerophosphate
+ Acid Phosphatase, Cytochemical
+ Acid Phosphatase, Disodium Phenylphosphate
+ Acid Phosphatase, Naphthyl Phosphate
+ Acid Phosphatase, Nitrophenylphosphate
+ Acid Phosphatase, Thymol Blue Monophosphate
+ Acid Phosphatase, Thymolphthale Inmonophosphate
+ Acid, Alpha-Ketobutyric And Nadh (U.V.), Hydroxybutyric Dehy...
+ Acid, Aniline, Fuchsin
+ Acid, Ascorbic, 2,4-Dinitrophenylhydrazine (Spectrophotometr...
+ Acid, Delta-Aminolevulinic, Ion-Exchange Columns With Colori...
+ Acid, Ferric Ion-Sulfuric, Cholesterol
+ Acid, Folic, Radioimmunoassay
+ Acid, Fuchsin
+ Acid, Hematein
+ Acid, Hyaluronic, Intraarticular
+ Acid, Hydroxyazobenzene-Benzoic, Albumin
+ Acid, Lactic, Enzymatic Method
+ Acid, Nitrous And Nitrosonaphthol, 5-Hydroxyindole Acetic Ac...
+ Acid, Osmic
+ Acid, Oxalacetic And Nadh Oxidation (U.V.), Malic Dehydrogen...
+ Acid, Periodic
+ Acid, Phosphoric-Tungstic (Spectrophotometric), Chloride
+ Acid, Pyruvic, Enzymatic (U.V.)
+ Acid, Trifluoroacetic, Vitamin A, Hexane Extraction
+ Acid, Uric, Acid Reduction Of Ferric Ion
+ Acid, Uric, Phosphotungstate Reduction
+ Acid, Uric, Uricase (Colorimetric)
+ Acid, Uric, Uricase (Gasometric)
+ Acid, Uric, Uricase (Oxygen Rate)
+ Acid, Uric, Uricase (U.V.)
+ Acid, Vanilmandelic, Diazo, P-Nitroaniline/Vanillin
+ Acid, Vanilmandelic, Electrophoretic Separation
+ Acid-Sphingomyelinase (Asm) Newborn Screening Test System
+ Acridine Orange
+ Activated Partial Thromboplastin
+ Activated Whole Blood Clotting Time
+ Activator, Ultraviolet, For Polymerization
+ Active Implantable Bone Conduction Hearing System
+ Active Noise Attenuation System For Infant Incubators
+ Actuator, Syringe, For Injector, Reprocessed
+ Actuator, Syringe, Injector Type
+ Acute Coronary Syndrome Event Detector
+ Acute Kidney Injury Test System
+ Adalimumab Assay
+ Adamts13 Activity Test System
+ Adapter, A-V Shunt Or Fistula
+ Adaptometer (Biophotometer)
+ Adaptometer (Biophotometer), Software-Based Data Acquisition...
+ Adaptor To The Cord, For Transurethral Surgical Instrument
+ Adaptor, Bulbs, Miscellaneous, For Endoscope
+ Adaptor, Catheter
+ Adaptor, Dressing
+ Adaptor, Fistula
+ Adaptor, Grooming
+ Adaptor, Holder, Syringe
+ Adaptor, Hygiene
+ Adaptor, Lead Switching, Electrocardiograph
+ Adaptor, Recreational
+ Adaptor, Short Increment Sensitivity Index (Sisi)
+ Adaptor, Shunt
+ Adaptor, Stopcock, Manifold, Fitting, Cardiopulmonary Bypass
+ Adaptor, Ureteral Catheter
+ Adaptor, Y
+ Additively Manufactured, Preformed, Resin Denture Tooth
+ Adenine Nucleotide Quantitation
+ Adenotome
+ Adhesive Backed Thermal Skin Patches
+ Adhesive, Albumin-Based
+ Adhesive, Bracket And Tooth Conditioner, Resin
+ Adhesive, Denture, Acacia And Karaya With Sodium Borate
+ Adhesive, Denture, Acacia And Karaya With Sodium Borate > 12...
+ Adhesive, Denture, Carboxymethylcellulose Sodium (32%) And E...
+ Adhesive, Denture, Carboxymethylcellulose Sodium (40-100&)
+ Adhesive, Denture, Carboxymethylcellulose Sodium (49%) And E...
+ Adhesive, Denture, Carboxymethylcellulose Sodium And Cationi...
+ Adhesive, Denture, Karaya
+ Adhesive, Denture, Karaya And Ethylene-Oxide Homopolymer
+ Adhesive, Denture, Karaya With Sodium Borate
+ Adhesive, Denture, Polyacrylamide Polymer (Modified Cationic...
+ Adhesive, Denture, Polyvinyl Methylether Maleic Acid Calcium...
+ Adhesive, Tissue For Aneurysmorrhaphy
+ Adjunct Monitor, Protein Calorie Malnutrition
+ Adjunctive Cardiovascular Status Indicator
+ Adjunctive Epicardial Vascular Physiologic Status Indicator
+ Adjunctive Heart Failure Status Indicator
+ Adjunctive Hemodynamic Indicator With Decision Point
+ Adjunctive Open Loop Fluid Therapy Recommender
+ Adjunctive Pain Measurement Device For Anesthesiology
+ Adjunctive Predictive Cardiovascular Indicator
+ Administration Set Docking Station
+ Administration Set Securement Device
+ Administrations Sets With Neuraxial Connectors
+ Admission Kit (Patient Utensil)
+ Adsorbents, Ion-Exchange
+ Adult Portable Bed Rails For Medical Purposes
+ Agent, Absorbable Hemostatic, Collagen Based
+ Agent, Absorbable Hemostatic, Non-Collagen Based
+ Agent, Bulking, Injectable For Gastro-Urology Use
+ Agent, Chelating For Decalcification
+ Agent, Clearing
+ Agent, Injectable, Embolic
+ Agent, Occluding, Vascular, Permanent
+ Agent, Polishing, Abrasive, Oral Cavity
+ Agent, Tooth Bonding, Resin
+ Agents, Embolic, For Treatment Of Benign Prostatic Hyperplas...
+ Agents, Embolic, For Treatment Of Uterine Fibroids
+ Agglutination Method, Human Chorionic Gonadotropin
+ Aggregometer, Platelet, Photo-Optical Scanning
+ Aggregometer, Platelet, Thrombokinetogram
+ Aggregrometer, Platelet
+ Aid, Cardiopulmonary Resuscitation
+ Aid, Surgical, Viscoelastic
+ Aid, Transfer
+ Aid, Vision Image Intensification
+ Aid, Vision, Electronic, Ac-Powered
+ Aid, Vision, Electronic, Battery-Powered
+ Aid, Vision, Optical, Ac-Powered
+ Aid, Vision, Optical, Battery-Powered
+ Aid, Visual, For Nausea
+ Aids, Speech Training For The Hearing Impaired (Ac-Powered A...
+ Aids, Speech Training For The Hearing Impaired (Battery-Oper...
+ Air Filter Portable Apparatus
+ Air Traffic Control
+ Air-Handling Apparatus Accessory
+ Airbrush
+ Airway Monitoring System
+ Airway Suction Kit
+ Airway, Esophageal (Obturator)
+ Airway, Nasopharyngeal
+ Airway, Oropharyngeal, Anesthesiology
+ Alarm, Blood-Pressure
+ Alarm, Conditioned Response Enuresis
+ Alarm, Leakage Current, Portable
+ Alarm, Pillow Pressure
+ Albumin, Antigen, Antiserum, Control
+ Albumin, Fitc, Antigen, Antiserum, Control
+ Albumin, Rhodamine, Antigen, Antiserum, Control
+ Alcian Blue
+ Alcohol Control Materials
+ Alcohol Dehydrogenase, Specific Reagent For Ethanol Enzyme M...
+ Aldehyde Fuchsin
+ Algesimeter, Manual
+ Algesimeter, Powered
+ Aligner, Beam, X-Ray
+ Aligner, Bracket, Orthodontic
+ Aligner, Sequential
+ Alignment Laser Product
+ Alizarin Red
+ Alizarin Sulfonate, Calcium
+ Alkaline Phosphatase
+ Alkaline Picrate, Colorimetry, Creatinine
+ Alloy, Amalgam
+ Alloy, Gold-Based Noble Metal
+ Alloy, Metal, Base
+ Alloy, Other Noble Metal
+ Alpha 2, 2n-Glycoprotein, Antigen, Antiserum, Control
+ Alpha-1 Microglobulin, Antigen, Antiserum, Control
+ Alpha-1-Acid-Glycoprotein, Antigen, Antiserum, Control
+ Alpha-1-Antichymotrypsin, Antigen, Antiserum, Control
+ Alpha-1-Antitrypsin Kit, Qualitative Phenotype
+ Alpha-1-Antitrypsin, Antigen, Antiserum, Control
+ Alpha-1-Antitrypsin, Fitc, Antigen, Antiserum, Control
+ Alpha-1-Antitrypsin, Rhodamine, Antigen, Antiserum, Control
+ Alpha-1-B-Glycoprotein, Antigen, Antiserum, Control
+ Alpha-1-Lipoprotein, Antigen, Antiserum, Control
+ Alpha-1-T-Glycoprotein, Antigen, Antiserum, Control
+ Alpha-2-Ap-Glycoprotein, Antigen, Antiserum, Control
+ Alpha-2-Glycoproteins, Antigen, Antiserum, Control
+ Alpha-2-Hs-Glycoprotein, Antigen, Antiserum, Control
+ Alpha-2-Macroglobulin, Antigen, Antiserum, Control
+ Alpha-2-Macroglobulin, Fitc, Antigen, Antiserum, Control
+ Alpha-2-Macroglobulin, Rhodamine, Antigen, Antiserum, Contro...
+ Alpha-D-Galactosidase A (Gla) Newborn Screening Test System
+ Alpha-D-Glucosidase (Gaa) Newborn Screening Test System
+ Alpha-Globulin, Antigen, Antiserum, Control
+ Alpha-L-Iduronidase (Idua) Newborn Screening Test System
+ Alpha-Naphthyl Phosphate, Alkaline Phosphatase Or Isoenzymes
+ Alternate Controller Enabled Insulin Infusion Pump
+ Alzheimer’S Disease Pathology Assessment Test
+ Amalgamator, Dental, Ac-Powered
+ Amikacin Serum Assay
+ Ammoniacal Silver Hydroxide Silver Nitrate
+ Ammonium Molybdate And Ammonium Vanadate, Phospholipids
+ Amnioscope, Transabdominal (Fetoscope) (And Accessories)
+ Amniotic Fluid Protein Immunoassay
+ Amniotome
+ Amplifier And Signal Conditioner, Biopotential
+ Amplifier And Signal Conditioner, Transducer Signal
+ Amplifier, Physiological Signal
+ Amplitude-Integrated Electroencephalograph
+ Amyloclastic, Amylase
+ Anaerobic Box Glove
+ Analytical Measuring And Detection Laser Product
+ Analyzer, Body Composition
+ Analyzer, Body Composition, Exempt
+ Analyzer, Chemistry (Photometric, Discrete), For Clinical Us...
+ Analyzer, Chemistry (Sequential Multiple, Continuous Flow) C...
+ Analyzer, Chemistry, Centrifugal, For Clinical Use
+ Analyzer, Chemistry, Micro, For Clinical Use
+ Analyzer, Chromosome, Automated
+ Analyzer, Data, Obstetric
+ Analyzer, Diagnostic, Fiber Optic (Colon)
+ Analyzer, Enzyme, For Clinical Use
+ Analyzer, Gas, Argon, Gaseous-Phase
+ Analyzer, Gas, Carbon-Dioxide, Gaseous-Phase
+ Analyzer, Gas, Carbon-Dioxide, Partial Pressure, Blood-Phase...
+ Analyzer, Gas, Carbon-Monoxide, Gaseous-Phase
+ Analyzer, Gas, Desflurane, Gaseous-Phase (Anesthetic Concent...
+ Analyzer, Gas, Enflurane, Gaseous-Phase (Anesthetic Concentr...
+ Analyzer, Gas, Halothane, Gaseous-Phase (Anesthetic Conc.)
+ Analyzer, Gas, Helium, Gaseous-Phase
+ Analyzer, Gas, Isoflurane, Gaseous-Phase (Anesthetic Concent...
+ Analyzer, Gas, Neon, Gaseous-Phase
+ Analyzer, Gas, Nitrogen, Gaseous-Phase
+ Analyzer, Gas, Nitrogen, Partial Pressure, Blood-Phase, Non-...
+ Analyzer, Gas, Nitrous-Oxide, Gaseous Phase (Anesthetic Conc...
+ Analyzer, Gas, Oxygen, Gaseous-Phase
+ Analyzer, Gas, Oxygen, Partial Pressure, Blood-Phase, Indwel...
+ Analyzer, Gas, Sevoflurane, Gaseous-Phase (Anesthetic Concen...
+ Analyzer, Gas, Water Vapor, Gaseous-Phase
+ Analyzer, Heparin, Automated
+ Analyzer, Ion, Hydrogen-Ion (Ph), Blood-Phase, Indwelling
+ Analyzer, Medical Image
+ Analyzer, Nitric Oxide
+ Analyzer, Nitrogen Dioxide
+ Analyzer, Nitrogen Dioxide, Exempt
+ Analyzer, Oxyhemoglobin Concentration, Blood-Phase, Indwelli...
+ Analyzer, Pacemaker Generator Function
+ Analyzer, Pacemaker Generator Function, Indirect
+ Analyzer, Rigidity
+ Analyzer, Spectrum, Electroencephalogram Signal
+ Anaplasma Spp. And Ehrlichia Spp. Serological Reagents
+ Anchor, Fascial
+ Anchor, Preformed
+ Anchor, Suture, Bone Fixation, Metallic
+ Anesthesia Breathing Circuit Kit (Adult & Pediatric)
+ Anesthesia Conduction Kit
+ Anesthesia Kit
+ Angiographic Coronary Vascular Physiologic Simulation Softwa...
+ Angiography/Angioplasty Kit
+ Angioscope
+ Angioscopic Valvulotome Kit
+ Aniline
+ Aniline Blue
+ Ankle Arthroplasty Implantation System
+ Ankle Fusion Cage
+ Anomaloscope
+ Anoscope And Accessories
+ Anterior Staple As Supplemental Fixation For Fusion
+ Anti Fog Solution And Accessories, Endoscopy
+ Anti-Dna Antibody (Enzyme-Labeled), Antigen, Control
+ Anti-Dna Antibody, Antigen And Control
+ Anti-Dna Indirect Immunofluorescent Solid Phase
+ Anti-Factor Xa Activity Test System, Apixaban
+ Anti-Glutamate Receptor (Type Nmda) Ifa
+ Anti-Human Globulin
+ Anti-Human Globulin, Fta-Abs Test
+ Anti-Jcv Antibody Detection Assay
+ Anti-Müllerian Hormone Test System
+ Anti-Mutated Citrullinated Vimentin Igg
+ Anti-Phospholipase A2 Receptor
+ Anti-Regurgitation Blood Tubing Kit
+ Anti-Ribosomal P Antibodies
+ Anti-Rnp Antibody, Antigen And Control
+ Anti-Sm Antibody, Antigen And Control
+ Anti-Ss-A 52 Autoantibodies
+ Anti-Ss-A Ro60 Autoantibodies
+ Anti-Stick Glass Syringe
+ Anti-Streptokinase
+ Anti-Theft Detector (Non-Eas)
+ Antibodies, Anti-Actin, Anti-Smooth Muscle
+ Antibodies, Anti-Cyclic Citrullinated Peptide (Ccp)
+ Antibodies, Gliadin
+ Antibodies, Outer-Membrane Proteins
+ Antibodies, Saccharomyces Cerevisiae (S.Cerevisiae)
+ Antibody Igm, If, Epstein-Barr Virus
+ Antibody Igm,If, Cytomegalovirus Virus
+ Antibody To Htlv-1, Elisa
+ Antibody, Monoclonal Blocking, Hiv-1
+ Antideoxyribonuclease, Streptococcus Spp.
+ Antigen(Complexed),Prostate Specific,(Cpsa)
+ Antigen, Agglutinating, Echinococcus Spp.
+ Antigen, Antiserum, Control, Antithrombin Iii
+ Antigen, B. Parapertussis
+ Antigen, B. Pertussis
+ Antigen, Bentonite Flocculation, Trichinella Spiralis
+ Antigen, Blastomyces Dermatitidis, Other
+ Antigen, C. Difficile
+ Antigen, Cancer 549
+ Antigen, Cartilage Oligomeric Matrix Protein (Comp)
+ Antigen, Cf (Including Cf Control), Cytomegalovirus
+ Antigen, Cf (Including Cf Control), Epstein-Barr Virus
+ Antigen, Cf (Including Cf Control), Herpesvirus Hominis 1,2
+ Antigen, Cf (Including Cf Control), Mumps Virus
+ Antigen, Cf (Including Cf Control), Rubella
+ Antigen, Cf (Including Cf Controls), Respiratory Syncytial V...
+ Antigen, Cf And / Or Id, Coccidioides Immitis
+ Antigen, Cf, (Including Cf Control), Rubeola
+ Antigen, Cf, (Including Cf Control), Varicella-Zoster
+ Antigen, Cf, Aspergillus Spp.
+ Antigen, Cf, B. Dermatitidis
+ Antigen, Cf, Lymphocytic Choriomeningitis Virus
+ Antigen, Cf, Psittacosis (Chlamydia Group)
+ Antigen, Cf, Q Fever
+ Antigen, Cf, Spotted Fever Group
+ Antigen, Cf, T. Cruzi
+ Antigen, Cf, Typhus Fever Group
+ Antigen, Ebv, Capsid
+ Antigen, Elisa, Cryptococcus
+ Antigen, Enzyme Linked Immunoabsorbent Assay, Neisseria Gono...
+ Antigen, Erysipelothrix Rhusiopathiae
+ Antigen, Fluorescent Antibody Test, Schistosoma Mansoni
+ Antigen, Galactomannan, Aspergillus Spp.
+ Antigen, Ha (Including Ha Control), Mumps Virus
+ Antigen, Ha (Including Ha Control), Rubella
+ Antigen, Ha (Including Ha Control), Rubeola
+ Antigen, Id, Candida Albicans
+ Antigen, Id, Ha, Cep, Entamoeba Histolytica & Rel. Spp.
+ Antigen, Iha, Cytomegalovirus
+ Antigen, Iha, T. Cruzi
+ Antigen, Indirect Fluorescent Antibody Test, Echinococcus Gr...
+ Antigen, Inflammatory Response Marker, Sepsis
+ Antigen, Invasive Fungal Pathogens
+ Antigen, Latex Agglutination, Coccidioides Immitis
+ Antigen, Latex Agglutination, Entamoeba Histolytica & Rel. S...
+ Antigen, Latex Agglutination, T. Cruzi
+ Antigen, Latex Agglutination, Trichinella Spiralis
+ Antigen, Positive Control, Cryptococcus Neoformans
+ Antigen, Rubella, Other
+ Antigen, Treponema Pallidum For Fta-Abs Test
+ Antigens (Febrile), Agglutination, Brucella Spp.
+ Antigens, All Groups, Salmonella Spp.
+ Antigens, All Groups, Shigella Spp.
+ Antigens, All Groups, Streptococcus Spp.
+ Antigens, All Types, Escherichia Coli
+ Antigens, All, Leptospira Spp.
+ Antigens, Cf (Including Cf Control), Adenovirus 1-33
+ Antigens, Cf (Including Cf Control), Coxsackievirus A 1-24, ...
+ Antigens, Cf (Including Cf Control), Echovirus 1-34
+ Antigens, Cf (Including Cf Control), Equine Encephalitis Vir...
+ Antigens, Cf (Including Cf Control), Influenza Virus A, B, C
+ Antigens, Cf (Including Cf Control), Parainfluenza Virus 1-4
+ Antigens, Cf (Including Cf Control), Poliovirus 1-3
+ Antigens, Cf (Including Cf Control), Reovirus 1-3
+ Antigens, Cf, All, Mycoplasma Spp.
+ Antigens, Cf, Toxoplasma Gondii
+ Antigens, Febrile (Weil-Felix), All Groups
+ Antigens, Febrile, Slide And Tube, All Groups, Salmonella Sp...
+ Antigens, Ha (Including Ha Control), Adenovirus 1-33
+ Antigens, Ha (Including Ha Control), Influenza Virus A, B, C
+ Antigens, Ha (Including Ha Control), Parainfluenza Virus 1-4
+ Antigens, Ha (Including Ha Control), Reovirus 1-3
+ Antigens, Ha, Echovirus 1-34
+ Antigens, Ha, Treponema Pallidum
+ Antigens, Histoplasma Capsulatum, All
+ Antigens, If, Toxoplasma Gondii
+ Antigens, Iha, Toxoplasma Gondii
+ Antigens, Indirect Hemagglutination (Iha) Herpes Simplex Vir...
+ Antigens, Nontreponemal, All
+ Antigens, Slide And Tube, All Types, Listeria Monocytogenes
+ Antigens, Slide And Tube, Francisella Tularensis
+ Antimicrobial Blood Pressure Cuff
+ Antimicrobial Drapes
+ Antimicrobial Keyboard
+ Antimitochondrial Antibody, Indirect Immunofluorescent, Anti...
+ Antinuclear Antibody (Enzyme-Labeled), Antigen, Controls
+ Antinuclear Antibody, Antigen, Control
+ Antinuclear Antibody, Indirect Immunofluorescent, Antigen, C...
+ Antiparietal Antibody, Indirect Immunofluorescent, Antigen, ...
+ Antisera, Acinetobacter Calcoaceticus, All Varieties
+ Antisera, Agglutinating, B. Parapertussis
+ Antisera, Agglutinating, B. Pertussis, All
+ Antisera, All Fluorescent, Leptospira Spp.
+ Antisera, All Groups, N. Meningitidis
+ Antisera, All Groups, Salmonella Spp.
+ Antisera, All Groups, Streptococcus Spp.
+ Antisera, All Leptospira Spp.
+ Antisera, All Mycoplasma Spp.
+ Antisera, All Types, Escherichia Coli
+ Antisera, All Types, H. Influenza
+ Antisera, All Types, Klebsiella Spp.
+ Antisera, All Types, Listeria Monocytogenes
+ Antisera, All Types, Shigella Spp.
+ Antisera, All Types, Streptococcus Pneumoniae
+ Antisera, All, Serratia Marcesans
+ Antisera, Arizona Spp., All
+ Antisera, Bethesda - Ballerup Polyvalent, Citrobacter Spp.
+ Antisera, C. Acnes
+ Antisera, C. Acnes (553, 605)
+ Antisera, Cf, Adenovirus 1-33
+ Antisera, Cf, Coxsackievirus A 1-24, B 1-6
+ Antisera, Cf, Echovirus 1-34
+ Antisera, Cf, Equine Encephalitis Virus, Eee, Wee
+ Antisera, Cf, Herpesvirus Hominis 1,2
+ Antisera, Cf, Influenza Virus A, B, C
+ Antisera, Cf, Parainfluenza Virus 1-4
+ Antisera, Cf, Poliovirus 1-3
+ Antisera, Cf, Reovirus 1-3
+ Antisera, Cf, Rubella
+ Antisera, Conjugated Fluorescent, Cytomegalovirus
+ Antisera, Control For Nontreponemal Tests
+ Antisera, Fluorescent Antibody For Fta-Abs Test
+ Antisera, Fluorescent, Adenovirus 1-33
+ Antisera, Fluorescent, All Globulins, Proteus Spp.
+ Antisera, Fluorescent, All Globulins, Salmonella Spp.
+ Antisera, Fluorescent, All Globulins, Shigella Spp.
+ Antisera, Fluorescent, All Groups, N. Meningitidis
+ Antisera, Fluorescent, All Groups, Streptococcus Spp.
+ Antisera, Fluorescent, All Types, Escherichia Coli
+ Antisera, Fluorescent, All Types, Hemophilus Spp.
+ Antisera, Fluorescent, All Types, Klebsiella Spp.
+ Antisera, Fluorescent, All Types, Listeria Monocytogenes
+ Antisera, Fluorescent, All Types, Staphylococcus Spp.
+ Antisera, Fluorescent, All Types, Streptococcus Pneumoniae
+ Antisera, Fluorescent, All, Mycoplasma Spp.
+ Antisera, Fluorescent, B. Parapertussis
+ Antisera, Fluorescent, B. Pertussis
+ Antisera, Fluorescent, Brucella Spp.
+ Antisera, Fluorescent, Chlamydia Spp.
+ Antisera, Fluorescent, Coxsackievirus A 1-24, B 1-6
+ Antisera, Fluorescent, Cryptococcus Neoformans
+ Antisera, Fluorescent, Echovirus 1-34
+ Antisera, Fluorescent, Herpesvirus Hominis 1,2
+ Antisera, Fluorescent, Histoplasma Capsulatum
+ Antisera, Fluorescent, Human Metapneumovirus
+ Antisera, Fluorescent, Poliovirus 1-3
+ Antisera, Fluorescent, Pseudomonas Aeruginosa
+ Antisera, Fluorescent, Pseudomonas Pseudomallei
+ Antisera, Fluorescent, Sporothrix Schenekii
+ Antisera, Hai (Including Hai Control), Rubella
+ Antisera, Hai, Adenovirus 1-33
+ Antisera, Hai, Influenza Virus A, B, C
+ Antisera, Hai, Parainfluenza Virus 1-4
+ Antisera, Hai, Reovirus 1-3
+ Antisera, If, Toxoplasma Gondii
+ Antisera, Immunoperoxidase, Chlamydia Spp.
+ Antisera, Latex Agglutination, Cryptococcus Neoformans
+ Antisera, Neutralization, Adenovirus 1-33
+ Antisera, Neutralization, All Types, Rhinovirus
+ Antisera, Neutralization, Coxsackievirus A 1-24, B 1-6
+ Antisera, Neutralization, Echovirus 1-34
+Show More
+
+
+
+
+Event Type
+
+
+
+
+Death
+Injury
+Malfunction
+Other
+No Answer Provided
+
+					  
+					Manufacturer
+					  
+					
+
+
+
+Model Number
+
+
+
+					  
+					Report Number	
+					  
+					
+
+
+
+Brand Name
+
+
+
+					  
+					Product Code	
+					  
+					
+
+
+
+Date Report Received by FDA (mm/dd/yyyy)
+
+
+
+				   
+				to
+				  
+				
+				 
+
+
+
+
+Go to Simple Search
+				      
+				
+5
+10
+25
+50
+100
+ 
+				Records per Report Page
+				     
+				Clear Form
+				     
+				  
+				
+
+
+
+
+
+
+Other Databases
+
+510(k)s
+De Novo
+CDRH Export Certificate Validation (CECV)
+CDRH FOIA Electronic Reading Room
+CFR Title 21
+CLIA
+Device Classification
+FDA Guidance Documents 
+Humanitarian Device Exemption 
+Medsun Reports
+Premarket Approvals (PMAs)
+Post-Approval Studies
+Postmarket Surveillance Studies
+Radiation-Emitting Products
+Radiation-Emitting Electronic Products Corrective Actions
+Recalls
+Registration & Listing
+Standards
+Total Product Life Cycle
+X-Ray Assembler
+
+
+
+
+
+Each year, the FDA receives several hundred thousand medical device reports (MDRs) of suspected device-associated deaths, serious injuries and malfunctions. The FDA uses MDRs to monitor device performance, detect potential device-related safety issues, and contribute to benefit-risk assessments of these products.  The MAUDE database houses MDRs submitted to the FDA by mandatory reporters 1 (manufacturers, importers and device user facilities) and voluntary reporters such as health care professionals, patients and consumers.
+Although MDRs are a valuable source of information, this passive surveillance system has limitations, including the potential submission of incomplete, inaccurate, untimely, unverified, or biased data.  In addition, the incidence or prevalence of an event cannot be determined from this reporting system alone due to under-reporting of events, inaccuracies in reports, lack of verification that the device caused the reported event,  and lack of information about frequency of device use. Because of this, MDRs comprise only one of the FDA's several important postmarket surveillance data sources.
+Please see the MDR Data Files webpage for Device Experience Network (DEN) and Alternative Summary Report (ASR) data received by the FDA.
+
+
+Please note that the MAUDE web search feature is limited to adverse event reports within the past 10 years.
+MDR data alone cannot be used to establish rates of events, evaluate a change in event rates over time or compare event rates between devices.  The number of reports cannot be interpreted or used in isolation to reach conclusions about the existence, severity, or frequency of problems associated with devices.
+Confirming whether a device actually caused a specific event can be difficult based solely on information provided in a given report. Establishing a cause-and-effect relationship is especially difficult if circumstances surrounding the event have not been verified or if the device in question has not been directly evaluated.
+MAUDE data does not represent all known safety information for a reported medical device and should be interpreted in the context of other available information when making device-related or treatment decisions.
+Variations in trade, product, and company names affect search results. Searches only retrieve records that contain the search term(s) provided by the requester.
+Submission of a medical device report and the FDA's release of that information is not necessarily an admission that a product, user facility, importer, distributor, manufacturer, or medical personnel caused or contributed to the event.
+Certain types of report information are protected from public disclosure under the Freedom of Information Act (FOIA).  If a report contains trade secret or confidential business information, that text is replaced by "(b)(4)".   If a report contains personnel or medical files information, that text is replaced by "(b)(6)".  The designations "(b)(4)" and "(b)(6)" refer to the exemptions in the FOIA. For example, "(b)(4)" may be found in place of the product's composition and "(b)(6)" may be found in place of a patient's age.
+MAUDE is updated monthly and the search page reflects the date of the most recent update. The FDA seeks to include all reports received prior to the update but the inclusion of some reports may be delayed.
+Exemptions granted and identified with "RWDxxxxxxx" in MAUDE, where RWD stands for real-world data, and xxxxxxx is replaced with a unique RWD exemption identifier, represent reports where the information submitted by the manufacturer was collected from certain real-world data sources, such as registries, electronic health records, or medical claims.
+
+
+
+
+1.
+  Manufacturers and importers must submit reports when they become aware of information that reasonably suggests that one of their marketed devices may have caused or contributed to a death or serious injury or has malfunctioned and the malfunction of the device or a similar device that they market would be likely to cause or contribute to a death or serious injury if the malfunction were to recur.  Manufacturers must send reports of such deaths, serious injuries and malfunctions to the FDA.  Importers must send reports of deaths and serious injuries to the FDA and the manufacturer, and reports of malfunctions to the manufacturer. 
+
+Device user facilities include hospitals, outpatient diagnostic or treatment facilities, nursing homes and ambulatory surgical facilities.  Device user facilities must submit reports when they become aware of information that reasonably suggests that a device may have caused or contributed to a death or serious injury of a patient in their facility.  Death reports must be sent to the FDA and the manufacturer, if known.  Serious injury reports must be sent to the manufacturer or to the FDA, if the manufacturer is not known.
+
+
+
+
+
+
+-
+
+
+
+-
+
+
+
+
+
+
+
+
+Links on this page:
+
+
+
+
+Page Last Updated: 02/29/2024
+
+      Note: If you need help accessing information in different file formats, see
+      Instructions for Downloading Viewers and Players.
+Language Assistance Available: Español | 繁體中文 | Tiếng Việt | 한국어 | Tagalog | Русский | العربية | Kreyòl Ayisyen | Français | Polski | Português | Italiano | Deutsch | 日本語 | فارسی | English
+
+
+
+
+
+
+
+
+Accessibility
+Contact FDA
+Careers
+FDA Basics
+FOIA
+No FEAR Act
+Nondiscrimination
+Website Policies / Privacy
+
+
+
+
+
+
+
+
+
+
+U.S. Food and Drug Administration
+
+              10903 New Hampshire Avenue 
+              Silver Spring, MD 20993 
+              Ph. 1-888-INFO-FDA (1-888-463-6332)
+Contact FDA
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+For Government
+For Press
+
+
+
+
+
+
+Combination Products
+Advisory Committees
+Science & Research
+Regulatory Information
+Safety
+Emergency Preparedness
+International Programs
+News & Events
+Training and Continuing Education
+Inspections/Compliance
+State & Local Officials
+Consumers
+Industry
+Health Professionals
+FDA Archive
+Vulnerability Disclosure Policy
+
+
+
+
+
+
+ 
+
+
+
+Links on this page:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Source: https:\\www.accessdata.fda.gov\scripts\cdrh\cfdocs\cfpmn\pmn.cfm
+
+
+
+
+
+
+
+
+510(k) Premarket Notification
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Quick Links: Skip to main page content
+Skip to Search
+Skip to Topics Menu
+Skip to Common Links
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                U.S. Food & Drug Administration
+              
+
+ 
+
+
+
+
+
+
+
+Follow FDA
+En Español
+
+
+
+
+
+Search FDA
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+Home
+Food
+Drugs
+Medical Devices
+Radiation-Emitting Products
+Vaccines, Blood & Biologics
+Animal & Veterinary
+Cosmetics
+Tobacco Products
+
+
+ 
+
+
+
+ 
+ 
+
+510(k) Premarket Notification
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+FDA Home
+Medical Devices
+Databases
+
+
+
+
+
+ -
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A 510(K) is a premarket submission made to FDA to demonstrate that the device to be marketed is as safe and effective, that is, substantially equivalent, to a legally marketed device (section 513(i)(1)(A) FD&C Act) that is not subject to premarket approval.
+Learn more...
+
+
+
+
+
+Search Database
+
+Help
+
+Download Files
+
+
+
+
+
+
+
+
+510K Number
+
+
+
+
+
+
+
+Type 
+						
+
+Traditional
+Special
+Abbreviated
+
+
+
+Product Code 
+
+
+
+
+
+
+Center
+
+
+
+Biologics Evaluation and Research
+					Devices and Radiological Health
+				
+
+
+Combination Products
+					 
+					
+
+
+
+Applicant Name
+
+
+Cleared/Approved In Vitro Products 
+
+
+
+Device Name
+
+
+Redacted FOIA 510(k) 
+
+
+
+Panel
+
+
+
+Anesthesiology
+General Hospital
+Ear Nose & Throat
+General & Plastic Surgery
+Immunology
+Ophthalmic
+Radiology
+Cardiovascular
+Gastroenterology/Urology
+Microbiology
+Orthopedic
+Clinical Chemistry
+Neurology
+Pathology
+Toxicology
+Dental
+Hematology
+Obstetrics/Gynecology
+Physical Medicine
+Molecular Genetics
+
+
+
+Third Party Reviewed
+					 
+					
+
+
+
+Decision
+
+
+
+SE - POSTMARKET SURVEILLANCE REQUIRED (SESP)
+						SE - WITH LIMITATIONS (SESU)
+						SE SUBJECT TO TRACKING REG (ST)
+						SE SUBJECT TO TRAKING & PMS (PT)
+						SUBST EQUIV (SESE)
+						SUBST EQUIV - KIT (SESK)
+						SUBST EQUIV - KIT WITH DRUGS (SEKD)
+						SUBST EQUIV - MARKET AFTER INSPECTION (SI)
+						SUBST EQUIV - WITH DRUG (SESD)
+						SUBST EQUIV FOR SOME INDICATIONS (SN)
+					
+
+
+
+Decision Date
+
+
+
+
+ 
+
+
+to  
+					
+
+ 
+
+
+Clinical Trials
+						 
+						
+
+
+
+
+
+
+Sort by
+
+
+
+
+
+Decision Date (descending)
+					Decision Date (ascending) 
+					Device Name (A-Z)
+					Device Name (Z-A)
+					Applicant Name (A-Z)
+					Applicant Name (Z-A)
+					510(k) Number (descending)
+					510(k) Number (ascending)
+					
+
+
+
+
+
+
+
+Quick Search  
+				
+
+Clear Form
+					    
+					
+					  
+				
+
+
+
+
+
+
+
+
+
+Other Databases
+
+De Novo
+Medical Device Reports (MAUDE)
+CDRH Export Certificate Validation (CECV)
+CDRH FOIA Electronic Reading Room
+CFR Title 21
+CLIA
+Device Classification
+FDA Guidance Documents 
+Humanitarian Device Exemption 
+Medsun Reports
+Premarket Approvals (PMAs)
+Post-Approval Studies
+Postmarket Surveillance Studies
+Radiation-Emitting Products
+Radiation-Emitting Electronic Products Corrective Actions
+Recalls
+Registration & Listing
+Standards
+Total Product Life Cycle
+X-Ray Assembler
+
+
+
+
+
+
+-
+
+
+
+-
+
+
+
+
+
+
+
+
+Links on this page:
+
+
+
+
+Page Last Updated: 04/01/2024
+
+      Note: If you need help accessing information in different file formats, see
+      Instructions for Downloading Viewers and Players.
+Language Assistance Available: Español | 繁體中文 | Tiếng Việt | 한국어 | Tagalog | Русский | العربية | Kreyòl Ayisyen | Français | Polski | Português | Italiano | Deutsch | 日本語 | فارسی | English
+
+
+
+
+
+
+
+
+Accessibility
+Contact FDA
+Careers
+FDA Basics
+FOIA
+No FEAR Act
+Nondiscrimination
+Website Policies / Privacy
+
+
+
+
+
+
+
+
+
+
+U.S. Food and Drug Administration
+
+              10903 New Hampshire Avenue 
+              Silver Spring, MD 20993 
+              Ph. 1-888-INFO-FDA (1-888-463-6332)
+Contact FDA
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+For Government
+For Press
+
+
+
+
+
+
+Combination Products
+Advisory Committees
+Science & Research
+Regulatory Information
+Safety
+Emergency Preparedness
+International Programs
+News & Events
+Training and Continuing Education
+Inspections/Compliance
+State & Local Officials
+Consumers
+Industry
+Health Professionals
+FDA Archive
+Vulnerability Disclosure Policy
+
+
+
+
+
+
+ 
+
+
+
+Links on this page:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Source: https:\\pubmed.ncbi.nlm.nih.gov\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PubMed
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        This site needs JavaScript to work properly. Please enable it to take advantage of the complete set of features!
+      
+
+
+
+
+
+
+      Clipboard, Search History, and several other advanced features are temporarily unavailable.
+    
+
+
+
+
+
+    Skip to main page content
+  
+
+
+
+
+
+
+
+An official website of the United States government
+
+Here's how you know
+
+
+
+
+
+
+
+
+The .gov means it’s official.
+
+            Federal government websites often end in .gov or .mil. Before
+            sharing sensitive information, make sure you’re on a federal
+            government site.
+          
+
+
+
+
+
+
+The site is secure.
+
+            The https:// ensures that you are connecting to the
+            official website and that any information you provide is encrypted
+            and transmitted securely.
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Log in
+
+
+
+Show account info
+
+
+
+
+
+Close
+Account
+
+
+						Logged in as:
+username
+
+
+
+Dashboard
+Publications
+Account settings
+Log out
+
+
+
+
+
+
+
+
+Access keys
+NCBI Homepage
+MyNCBI Homepage
+Main Content
+Main Navigation
+
+
+
+
+
+
+
+Home Page
+
+
+
+
+
+
+
+
+
+
+
+
+
+    Search:
+  
+Search
+
+
+
+
+
+
+Advanced
+
+          Clipboard 
+
+
+
+
+
+
+      PubMed® comprises more than 36 million citations for biomedical literature from MEDLINE, life science journals, and online books. Citations may include links to full text content from PubMed Central and publisher web sites.
+    
+
+
+
+
+
+Learn
+
+
+            About PubMed
+          
+
+
+
+            FAQs & User Guide
+          
+
+
+
+            Finding Full Text
+          
+
+
+
+
+Find
+
+
+            Advanced Search
+          
+
+
+
+            Clinical Queries
+          
+
+
+
+            Single Citation Matcher
+          
+
+
+
+
+Download
+
+
+            E-utilities API
+          
+
+
+
+            FTP
+          
+
+
+
+            Batch Citation Matcher
+          
+
+
+
+
+Explore
+
+
+            MeSH Database
+          
+
+
+
+            Journals
+          
+
+
+
+
+
+
+
+
+          Trending Articles
+        
+
+          PubMed records with recent increases in activity
+        
+
+
+
+                Depleting myeloid-biased haematopoietic stem cells rejuvenates aged immunity.
+              
+
+Ross JB, et al.
+Nature. 2024.
+PMID: 38538791
+
+
+
+
+                Formation of memory assemblies through the DNA-sensing TLR9 pathway.
+              
+
+Jovasevic V, et al.
+Nature. 2024.
+PMID: 38538785
+
+
+
+
+                Transketolase promotes MAFLD by limiting inosine-induced mitochondrial activity.
+              
+
+Tong L, et al.
+Cell Metab. 2024.
+PMID: 38547864
+
+
+
+
+                Oxygen imaging of hypoxic pockets in the mouse cerebral cortex.
+              
+
+Beinlich FRM, et al.
+Science. 2024.
+PMID: 38547288
+
+
+
+
+                Targeting DCAF5 suppresses SMARCB1-mutant cancer by stabilizing SWI/SNF.
+              
+
+Radko-Juettner S, et al.
+Nature. 2024.
+PMID: 38538798
+
+
+
+
+
+
+            See more trending articles
+          
+
+
+
+
+        Latest Literature
+      
+
+        New articles from highly accessed journals
+      
+
+
+
+              Am J Med (2)
+            
+
+
+
+              Arch Phys Med Rehabil (2)
+            
+
+
+
+              Biochem Biophys Res Commun (3)
+            
+
+
+
+              Gastroenterology (2)
+            
+
+
+
+              J Am Acad Dermatol (4)
+            
+
+
+
+              J Biol Chem (7)
+            
+
+
+
+              J Ethnopharmacol (4)
+            
+
+
+
+              Lancet (10)
+            
+
+
+
+              Sci Rep (28)
+            
+
+
+
+              Vaccine (3)
+            
+
+
+
+
+
+
+
+
+
+NCBI Literature Resources
+
+MeSH
+PMC
+Bookshelf
+Disclaimer
+
+The PubMed wordmark and PubMed logo are registered trademarks of the U.S. Department of Health and Human Services (HHS). Unauthorized use of these marks is strictly prohibited.
+
+
+
+
+
+Follow NCBI
+
+
+
+
+Twitter
+
+
+
+
+
+
+Facebook
+
+
+
+
+LinkedIn
+
+
+
+
+
+
+
+GitHub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Connect with NLM
+
+
+
+Twitter
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SM-Facebook
+
+
+
+
+
+
+
+
+
+SM-Youtube
+
+
+
+
+
+
+
+
+
+National Library of Medicine
+8600 Rockville Pike
+                  Bethesda, MD 20894
+
+
+Web Policies
+FOIA
+HHS Vulnerability Disclosure
+
+
+Help
+Accessibility
+Careers
+
+
+
+
+
+
+
+NLM
+
+
+NIH
+
+
+HHS
+
+
+USA.gov
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Source: https:\\ec.europa.eu\tools\eu
+
+
+
+
+Page not found
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Page not found
+
+The page you requested could not be found. This might have happened because
+
+the page has moved
+the page no longer exists
+
+
+Return to the homepage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Contact the European Commission
+
+
+
+Follow the European Commission on social media
+
+
+
+
+
+
+Resources for partners
+
+
+
+
+
+
+
+
+Languages on our websites
+
+
+Cookies
+
+
+Privacy policy
+
+
+Legal notice
+
+
+
+
+
+
+
+
+
+
+
+
+
