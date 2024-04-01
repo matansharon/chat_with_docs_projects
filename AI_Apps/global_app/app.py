@@ -145,6 +145,61 @@ def get_response(query):
         response=st.session_state.llm.invoke(f"base your answer on the following context {st.session_state['website_content']} and answer the following query: {query}")
         return response.content
 
+def chat(user_input):
+    if st.session_state.app=="Chat with PDF":
+            if st.session_state.pdf_file is None:
+                st.session_state.chat_history.append(AIMessage('Please upload a pdf file'))
+                
+            else:
+                response=get_response(user_input)
+                st.session_state.chat_history.append(HumanMessage(user_input))
+                st.session_state.chat_history.append(AIMessage(response))
+                
+            
+        
+        
+    elif st.session_state.app=="Chat with Audio":
+        if st.session_state.audio_file is None:
+            st.session_state.chat_history.append(AIMessage('Please upload a audio file'))
+        else:
+            
+            
+            response=get_response(user_input)
+            st.session_state.chat_history.append(HumanMessage(user_input))
+            st.session_state.chat_history.append(AIMessage(response))
+        
+    
+    
+    
+    elif st.session_state.app=="Chat with CSV":
+        if st.session_state.csv_file is None:
+            st.session_state.chat_history.append(AIMessage('Please upload a csv file'))
+        else:
+            
+            response=get_response(user_input)
+            
+            st.session_state.chat_history.append(HumanMessage(user_input))
+            try:
+                st.session_state.chat_history.append(AIMessage(response))
+            except:
+                st.session_state.chat_history.append(AIMessage("here is the answer: ",additional_kwargs={"content":response}))
+            
+    
+    
+    
+    elif st.session_state.app=="Chat with Website":
+        if st.session_state.website_url is None:
+            st.session_state.chat_history.append(AIMessage('Please enter a website url'))
+        else:
+            
+            
+            response=get_response(user_input)
+            st.session_state.chat_history.append(HumanMessage(user_input))
+            st.session_state.chat_history.append(AIMessage(response))
+        
+    display_chat_history()
+
+
 
 
 def main():
@@ -161,60 +216,11 @@ def main():
     
     
     if user_input:
-        
-        
-        if st.session_state.app=="Chat with PDF":
-            if st.session_state.pdf_file is None:
-                st.session_state.chat_history.append(AIMessage('Please upload a pdf file'))
-                
-            else:
-                response=get_response(user_input)
-                st.session_state.chat_history.append(HumanMessage(user_input))
-                st.session_state.chat_history.append(AIMessage(response))
-                
-            
-        
-        
-        elif st.session_state.app=="Chat with Audio":
-            if st.session_state.audio_file is None:
-                st.session_state.chat_history.append(AIMessage('Please upload a audio file'))
-            else:
-                
-                
-                response=get_response(user_input)
-                st.session_state.chat_history.append(HumanMessage(user_input))
-                st.session_state.chat_history.append(AIMessage(response))
-            
+        chat(user_input)
+    
         
         
         
-        elif st.session_state.app=="Chat with CSV":
-            if st.session_state.csv_file is None:
-                st.session_state.chat_history.append(AIMessage('Please upload a csv file'))
-            else:
-                
-                response=get_response(user_input)
-                
-                st.session_state.chat_history.append(HumanMessage(user_input))
-                try:
-                    st.session_state.chat_history.append(AIMessage(response))
-                except:
-                    st.session_state.chat_history.append(AIMessage("here is the answer: ",additional_kwargs={"content":response}))
-                
-        
-        
-        
-        elif st.session_state.app=="Chat with Website":
-            if st.session_state.website_url is None:
-                st.session_state.chat_history.append(AIMessage('Please enter a website url'))
-            else:
-                
-                
-                response=get_response(user_input)
-                st.session_state.chat_history.append(HumanMessage(user_input))
-                st.session_state.chat_history.append(AIMessage(response))
-            
-    display_chat_history()
 
 if __name__=="__main__":
     main()
