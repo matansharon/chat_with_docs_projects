@@ -249,15 +249,6 @@ def main():
         chat(user_input)
     if 'local_files' not in st.session_state:
         st.session_state['local_files']= load_local_files()
-        for name,content in st.session_state['local_files'].items():
-            st.write(name)
-            try:
-                st.write(content[:100])
-            except:
-                c=pd.read_csv("data_files/"+name)
-                st.write(c.head())
-        
-    
-    
+
 if __name__=="__main__":
     main()
