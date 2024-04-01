@@ -41,8 +41,6 @@ def init():
         AIMessage("Hello and welcome to the Global AI Apps"),
     ]
 
-
-
 def Write_UI():
     # UI stage
     if st.session_state.app=="Chat with PDF":
@@ -74,9 +72,7 @@ def Write_UI():
                 st.write(file.type)
         st.session_state.website_url=st.text_input("Enter a website url")
         st.session_state.app=st.selectbox("Select the app you want to use",["Chat with PDF","Chat with Audio",'Chat with CSV','Chat with Website'],)
-        
-    
-        
+
 def display_chat_history():
     for message in st.session_state.chat_history:
         if isinstance(message,HumanMessage):
@@ -98,33 +94,55 @@ def handel_pdf(file):
                 for page in pages:
                     text+=page.extract_text()
                 
-                st.write('len of the uploaded text is: ',len(text))
+                # st.write('len of the uploaded text is: ',len(text))
                 return text
 
+def handel_audio(path=""):
+    if path=="":
+        audio_file = open(st.session_state.audio_file.name, "rb")
+        # return audio_file
+        client=OpenAI()
+        transcription = client.audio.transcriptions.create(
+            
+        model="whisper-1", 
+        file=audio_file, 
+        response_format="text"
+        )
+        return transcription
+    else:
+        audio_file = open(path, "rb")
+        # return audio_file
+        client=OpenAI()
+        transcription=client.audio.transcriptions.create(
+        model="whisper-1",
+        file=audio_file,
+        response_format="text"
+        )
+        return transcription
 
-def handel_audio():
-    
-    audio_file = open(st.session_state.audio_file.name, "rb")
-    # return audio_file
-    client=OpenAI()
-    transcription = client.audio.transcriptions.create(
+def handel_csv(path=""):
+    if path=="":
+        try:
+            st.session_state['smart_df']=SmartDataframe(pd.read_csv(st.session_state.csv_file),config={'llm':st.session_state.pandas_llm})
+        except:
+            st.write("Error loading the csv file")
+    else:
         
-    model="whisper-1", 
-    file=audio_file, 
-    response_format="text"
-    )
-    return transcription
-def handel_csv():
-    st.session_state['smart_df']=SmartDataframe(pd.read_csv(st.session_state.csv_file),config={'llm':st.session_state.pandas_llm})
+        st.session_state['smart_df']=SmartDataframe(pd.read_csv(path,encoding='ISO-8859-1'),config={'llm':st.session_state.pandas_llm})
 
-def handel_url():
-    if st.session_state.website_url is None:
-        st.error("Please enter a website url")
-        return
-    
-    loader = WebBaseLoader(st.session_state.website_url)
-    document = loader.load()
-    st.session_state['website_content']=document
+def handel_url(url=""):
+    if url=="":
+        if st.session_state.website_url is None:
+            st.error("Please enter a website url")
+            return
+        
+        loader = WebBaseLoader(st.session_state.website_url)
+        document = loader.load()
+        st.session_state['website_content']=document
+    else:
+        loader = WebBaseLoader(url)
+        document = loader.load()
+        return document
 
 def get_response(query):
     if st.session_state.app=="Chat with PDF":
@@ -199,7 +217,24 @@ def chat(user_input):
         
     display_chat_history()
 
-
+def load_local_files():
+    files=os.listdir("/Users/matansharon/python/chat_with_doc/AI_Apps/global_app/data_files")
+    dict_files={}
+    for file in files:
+        dict_files[file]=""
+        if file.endswith(".pdf"):
+            content=handel_pdf("data_files/"+file)
+            dict_files[file]=content
+        elif file.endswith(".csv"):
+            content=handel_csv("data_files/"+file)
+            dict_files[file]=content
+        elif file.endswith(".mp3"):
+            content=handel_audio("data_files/"+file)
+            dict_files[file]=content
+        elif file.startswith("http"):
+            content=handel_url("data_files/"+file)
+            dict_files[file]=content
+    return dict_files
 
 
 def main():
@@ -208,19 +243,21 @@ def main():
     if 'init' not in st.session_state:
         init()
     Write_UI()
-
-
-    #interaction stage
-
+    
     user_input=st.chat_input("Ask me Anything...")
-    
-    
     if user_input:
         chat(user_input)
+    if 'local_files' not in st.session_state:
+        st.session_state['local_files']= load_local_files()
+        for name,content in st.session_state['local_files'].items():
+            st.write(name)
+            try:
+                st.write(content[:100])
+            except:
+                c=pd.read_csv("data_files/"+name)
+                st.write(c.head())
+        
     
-        
-        
-        
-
+    
 if __name__=="__main__":
     main()
