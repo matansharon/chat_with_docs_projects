@@ -21,8 +21,7 @@ import pandas as pd
 from pandasai.llm import OpenAI as pandas_openai
 from openai import OpenAI
 
-from pandasai import SmartDataframe,SmartDatalake
-
+from pandasai import SmartDataframe
 load_dotenv()
 
 
@@ -109,7 +108,12 @@ def handel_pdf(path=""):
         return text
 
 def handel_audio(path=""):
-    if path=="":
+    if path=="" or path.endswith(".mp3"):
+        if st.session_state.audio_file.name=="AI and the Paradox of Self-Replacing Workers  Madison Mohns  TED.mp3":
+            st.write("here")
+            with open(path, "r") as f:
+                text=f.read()
+                return text
         audio_file = open("data_files/"+st.session_state.audio_file.name, "rb")
         # return audio_file
         client=OpenAI()
@@ -120,16 +124,14 @@ def handel_audio(path=""):
         response_format="text"
         )
         return transcription
-    else:
-        audio_file = open(path, "rb")
-        # return audio_file
-        client=OpenAI()
-        transcription=client.audio.transcriptions.create(
-        model="whisper-1",
-        file=audio_file,
-        response_format="text"
-        )
-        return transcription
+    elif path.endswith(".txt"):
+        with open(path, "r") as f:
+            text=f.read()
+            return text
+            
+        
+        
+        
 
 def handel_csv(path=""):
     if path=="":
@@ -142,27 +144,25 @@ def handel_csv(path=""):
         st.session_state['smart_df']=SmartDataframe(pd.read_csv(path,encoding='ISO-8859-1'),config={'llm':st.session_state.pandas_llm})
 
 def handel_url(url=""):
-    text=""
-    path="data_files/website.txt"
-    with open(path,"r") as f:
-        text=f.read()
     
     
-    # if url=="":
-    #     if st.session_state.website_url is None:
-    #         st.error("Please enter a website url")
-    #         return
+    
+    if url=="":
+        if st.session_state.website_url is None:
+            st.error("Please enter a website url")
+            return
         
-    #     loader = WebBaseLoader(st.session_state.website_url)
-    #     document = loader.load()
-    st.session_state['website_content']=text
-    # else:
-    #     temp_url=url[11:]
-    #     temp_url=temp_url.replace("\\","/")
-    #     temp_url=temp_url[:-4]
-    #     loader = WebBaseLoader(temp_url)
-    #     document = loader.load()
-    #     return document
+        loader = WebBaseLoader(st.session_state.website_url)
+        document = loader.load()
+        return document
+    
+    else:
+        temp_url=url[11:]
+        temp_url=temp_url.replace("\\","/")
+        temp_url=temp_url[:-4]
+        loader = WebBaseLoader(temp_url)
+        document = loader.load()
+        return document
 
 def get_response(query):
     if st.session_state.app=="Chat with PDF":
@@ -234,8 +234,6 @@ def chat(user_input):
             response=get_response(user_input)
             st.session_state.chat_history.append(HumanMessage(user_input))
             st.session_state.chat_history.append(AIMessage(response))
-        
-    
 
 def load_local_files():
     files=os.listdir("/Users/matansharon/python/chat_with_doc/AI_Apps/global_app/data_files")
@@ -248,13 +246,16 @@ def load_local_files():
         elif file.endswith(".csv"):
             content=handel_csv("data_files/"+file)
             dict_files[file]=content
-        elif file.endswith(".mp3"):
-            content=handel_audio("data_files/"+file)
-            dict_files[file]=content
+        
         # elif file.startswith("http"):
         #     content=handel_url("data_files/"+file)
         #     dict_files[file]=content
+        elif file=="transcription.txt":
+            with open("./data_files/"+file, "r") as f:
+                content=f.read()
+                dict_files[file]=content
         
+    st.write(dict_files.keys())
     return dict_files
 
 
