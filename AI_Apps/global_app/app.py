@@ -108,12 +108,9 @@ def handel_pdf(path=""):
         return text
 
 def handel_audio(path=""):
-    if path=="" or path.endswith(".mp3"):
-        if st.session_state.audio_file.name=="AI and the Paradox of Self-Replacing Workers  Madison Mohns  TED.mp3":
-            st.write("here")
-            with open(path, "r") as f:
-                text=f.read()
-                return text
+    if path=="":
+        return st.session_state.local_files["AI_and_paradox_transcription.txt"]
+    elif path.endswith(".mp3"):
         audio_file = open("data_files/"+st.session_state.audio_file.name, "rb")
         # return audio_file
         client=OpenAI()
@@ -124,14 +121,7 @@ def handel_audio(path=""):
         response_format="text"
         )
         return transcription
-    elif path.endswith(".txt"):
-        with open(path, "r") as f:
-            text=f.read()
-            return text
-            
-        
-        
-        
+    
 
 def handel_csv(path=""):
     if path=="":
@@ -250,12 +240,12 @@ def load_local_files():
         # elif file.startswith("http"):
         #     content=handel_url("data_files/"+file)
         #     dict_files[file]=content
-        elif file=="transcription.txt":
+        elif file=="AI_and_paradox_transcription.txt":
             with open("./data_files/"+file, "r") as f:
                 content=f.read()
                 dict_files[file]=content
-        
     st.write(dict_files.keys())
+    
     return dict_files
 
 
