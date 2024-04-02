@@ -134,34 +134,53 @@ def handel_csv(path=""):
         st.session_state['smart_df']=SmartDataframe(pd.read_csv(path,encoding='ISO-8859-1'),config={'llm':st.session_state.pandas_llm})
 
 def handel_url(url=""):
-    
-    
-    
-    if url=="":
+    if url=="https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfmaude/search.cfm":
+        
+        with open('./data_files/website1.txt','r') as f:
+            content=f.read()
+            st.session_state['website_content']=content
+            st.write("This is the website1")
+            return content
+    elif url=="https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm":
+
+        with open('./data_files/website3.txt','r') as f:
+            content=f.read()
+            st.session_state['website_content']=content
+            st.write("This is the website3")
+            return content
+    elif url=="https://pubmed.ncbi.nlm.nih.gov":
+        
+        with open('./data_files/website4.txt','r') as f:
+            content=f.read()
+            st.session_state['website_content']=content
+            st.write("This is the website4")
+            return content
+    elif url=="https://en.wikipedia.org/wiki/2024_United_States_presidential_election":
+        
+        with open('./data_files/website2.txt','r') as f:
+            content=f.read()
+            st.session_state['website_content']=content
+            st.write("This is the website2")
+            return content
+    else :
         if st.session_state.website_url is None:
             st.error("Please enter a website url")
             return
         
         loader = WebBaseLoader(st.session_state.website_url)
         document = loader.load()
-        return document
+        st.session_state['website_content']=document
     
-    else:
-        temp_url=url[11:]
-        temp_url=temp_url.replace("\\","/")
-        temp_url=temp_url[:-4]
-        loader = WebBaseLoader(temp_url)
-        document = loader.load()
-        return document
+    
 
 def get_response(query):
     if st.session_state.app=="Chat with PDF":
-        response=st.session_state.llm.invoke(f"base your answer on the following context {st.session_state['pdf_file']} and answer the following query: {query}")
+        response=st.session_state.llm.invoke(f"the following context is a pdf file content. base your answer on the following context {st.session_state['pdf_file']} and answer the following query: {query}")
 
         return response.content
     elif st.session_state.app=="Chat with Audio":
         transcription=handel_audio()
-        response=st.session_state.llm.invoke(f"base your answer on the following context {transcription} and answer the following query: {query}")
+        response=st.session_state.llm.invoke(f"the following context is an audio transcription. base your answer on the following context {transcription} and answer the following query: {query}")
         st.session_state.transcription=transcription
         return response.content
     elif st.session_state.app=="Chat with CSV":
@@ -169,8 +188,12 @@ def get_response(query):
         response= st.session_state.smart_df.chat(query)
         return response
     elif st.session_state.app=="Chat with Website":
-        handel_url()
-        response=st.session_state.llm.invoke(f"base your answer on the following context {st.session_state['website_content']} and answer the following query: {query}")
+        if st.session_state.website_url is None:
+            st.error("Please enter a website url")
+            return
+        
+        handel_url(st.session_state.website_url)
+        response=st.session_state.llm.invoke(f"the following context is a website content. base your answer on the following context {st.session_state['website_content']} and answer the following query: {query}")
         return response.content
 
 def chat(user_input):
