@@ -29,14 +29,15 @@ load_dotenv()
 
 def init():
     st.session_state['init']=True
-    st.session_state['llm']=ChatOpenAI()
-    # st.session_state['llm']=ChatOpenAI(model_name='gpt-4-turbo-preview')
+    # st.session_state['llm']=ChatOpenAI()
+    st.session_state['llm']=ChatOpenAI(model_name='gpt-4-turbo-preview')
     st.session_state['pandas_llm']=pandas_openai()
     st.session_state['pdf_file']=None
     st.session_state['csv_file']=None
     st.session_state['audio_file']=None
     st.session_state['website_url']=None
     st.session_state['app']='Chat with PDF'
+    st.session_state['local_files']= load_local_files()
     st.session_state['chat_history']=[
         AIMessage("Hello and welcome to the Global AI Apps"),
     ]
@@ -59,6 +60,8 @@ def Write_UI():
     with st.sidebar:
         file=st.file_uploader("Upload a file", type=["pdf","csv",'mp3'])
         if file:
+            # if file.name in st.session_state.local_files:
+            #     st.write("File already exists")
             if file.type=="application/pdf":
                 st.session_state['pdf_file']=handel_pdf(file)
 
@@ -84,22 +87,30 @@ def display_chat_history():
                 if message.additional_kwargs:
                     st.write(message.additional_kwargs.get("content"))
 
-def handel_pdf(file):
-    if st.session_state.app:
-            if st.session_state.app=="Chat with PDF":
-                # text=PyPDF2.PdfReader(st.session_state.pdf_file)
-                
-                pages=PyPDF2.PdfReader(file).pages
-                text=""
-                for page in pages:
-                    text+=page.extract_text()
-                
-                # st.write('len of the uploaded text is: ',len(text))
-                return text
+def handel_pdf(path=""):
+    if path=="":
+        if st.session_state.app:
+                if st.session_state.app=="Chat with PDF":
+                    # text=PyPDF2.PdfReader(st.session_state.pdf_file)
+                    
+                    pages=PyPDF2.PdfReader(st.session_state.pdf_file).pages
+                    text=""
+                    for page in pages:
+                        text+=page.extract_text()
+                    
+                    # st.write('len of the uploaded text is: ',len(text))
+                    return text
+    else:
+        pages=PyPDF2.PdfReader(path).pages
+        text=""
+        for page in pages:
+            text+=page.extract_text()
+        
+        return text
 
 def handel_audio(path=""):
     if path=="":
-        audio_file = open(st.session_state.audio_file.name, "rb")
+        audio_file = open("data_files/"+st.session_state.audio_file.name, "rb")
         # return audio_file
         client=OpenAI()
         transcription = client.audio.transcriptions.create(
@@ -131,18 +142,27 @@ def handel_csv(path=""):
         st.session_state['smart_df']=SmartDataframe(pd.read_csv(path,encoding='ISO-8859-1'),config={'llm':st.session_state.pandas_llm})
 
 def handel_url(url=""):
-    if url=="":
-        if st.session_state.website_url is None:
-            st.error("Please enter a website url")
-            return
+    text=""
+    path="data_files/website.txt"
+    with open(path,"r") as f:
+        text=f.read()
+    
+    
+    # if url=="":
+    #     if st.session_state.website_url is None:
+    #         st.error("Please enter a website url")
+    #         return
         
-        loader = WebBaseLoader(st.session_state.website_url)
-        document = loader.load()
-        st.session_state['website_content']=document
-    else:
-        loader = WebBaseLoader(url)
-        document = loader.load()
-        return document
+    #     loader = WebBaseLoader(st.session_state.website_url)
+    #     document = loader.load()
+    st.session_state['website_content']=text
+    # else:
+    #     temp_url=url[11:]
+    #     temp_url=temp_url.replace("\\","/")
+    #     temp_url=temp_url[:-4]
+    #     loader = WebBaseLoader(temp_url)
+    #     document = loader.load()
+    #     return document
 
 def get_response(query):
     if st.session_state.app=="Chat with PDF":
@@ -215,7 +235,7 @@ def chat(user_input):
             st.session_state.chat_history.append(HumanMessage(user_input))
             st.session_state.chat_history.append(AIMessage(response))
         
-    display_chat_history()
+    
 
 def load_local_files():
     files=os.listdir("/Users/matansharon/python/chat_with_doc/AI_Apps/global_app/data_files")
@@ -231,9 +251,10 @@ def load_local_files():
         elif file.endswith(".mp3"):
             content=handel_audio("data_files/"+file)
             dict_files[file]=content
-        elif file.startswith("http"):
-            content=handel_url("data_files/"+file)
-            dict_files[file]=content
+        # elif file.startswith("http"):
+        #     content=handel_url("data_files/"+file)
+        #     dict_files[file]=content
+        
     return dict_files
 
 
@@ -243,12 +264,15 @@ def main():
     if 'init' not in st.session_state:
         init()
     Write_UI()
+    # for name,content in st.session_state.local_files.items():
+    #     st.write(name)
     
     user_input=st.chat_input("Ask me Anything...")
     if user_input:
         chat(user_input)
-    if 'local_files' not in st.session_state:
-        st.session_state['local_files']= load_local_files()
+    # if 'local_files' not in st.session_state:
+    display_chat_history()
+    
 
 if __name__=="__main__":
     main()
