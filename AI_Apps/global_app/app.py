@@ -267,7 +267,7 @@ def load_local_files():
             with open("./data_files/"+file, "r") as f:
                 content=f.read()
                 dict_files[file]=content
-    st.write(dict_files.keys())
+    
     
     return dict_files
 
