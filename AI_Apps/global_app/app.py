@@ -20,11 +20,9 @@ from langchain_openai import ChatOpenAI
 import pandas as pd
 from pandasai.llm import OpenAI as pandas_openai
 from openai import OpenAI
-
 from pandasai import SmartDataframe
+
 load_dotenv()
-
-
 
 def init():
     st.session_state['init']=True
@@ -121,7 +119,6 @@ def handel_audio(path=""):
         response_format="text"
         )
         return transcription
-    
 
 def handel_csv(path=""):
     if path=="":
@@ -170,8 +167,6 @@ def handel_url(url=""):
         loader = WebBaseLoader(st.session_state.website_url)
         document = loader.load()
         st.session_state['website_content']=document
-    
-    
 
 def get_response(query):
     if st.session_state.app=="Chat with PDF":
@@ -286,7 +281,6 @@ def main():
         chat(user_input)
     # if 'local_files' not in st.session_state:
     display_chat_history()
-    
 
 if __name__=="__main__":
     main()
