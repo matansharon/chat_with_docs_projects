@@ -136,28 +136,34 @@ def handel_url(url=""):
         with open('./data_files/website1.txt','r') as f:
             content=f.read()
             st.session_state['website_content']=content
-            st.write("This is the website1")
+            # st.write("This is the website1")
             return content
     elif url=="https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm":
 
         with open('./data_files/website3.txt','r') as f:
             content=f.read()
             st.session_state['website_content']=content
-            st.write("This is the website3")
+            # st.write("This is the website3")
             return content
     elif url=="https://pubmed.ncbi.nlm.nih.gov":
         
         with open('./data_files/website4.txt','r') as f:
             content=f.read()
             st.session_state['website_content']=content
-            st.write("This is the website4")
+            # st.write("This is the website4")
             return content
     elif url=="https://en.wikipedia.org/wiki/2024_United_States_presidential_election":
         
         with open('./data_files/website2.txt','r') as f:
             content=f.read()
             st.session_state['website_content']=content
-            st.write("This is the website2")
+            # st.write("This is the website2")
+            return content
+    elif url=="https://www.icumed.com/products/infusion-therapy/infusion-consumables/iv-connectors/clave-iv-connector-technology/":
+        with open('./data_files/icumed.txt','r') as f:
+            content=f.read()
+            st.session_state['website_content']=content
+            # st.write("This is the website2")
             return content
     else :
         if st.session_state.website_url is None:
